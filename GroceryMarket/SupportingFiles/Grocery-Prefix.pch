@@ -1,0 +1,20 @@
+//
+//  Grocery-Prefix.pch
+//  GroceryMarket
+//
+//  Created by Mitchel Igolimah on 11/07/2022.
+//
+
+#ifndef Grocery_Prefix_pch
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+#import "SceneDelegate.h"
+#import "GroceryCommonFunction.h"
+
+#define Grocery_Prefix_pch
+
+#define _kAppDelegate     (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
+
+#endif /* Grocery_Prefix_pch */

@@ -14,9 +14,28 @@
 		54FDBC68287CB10E00481281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54FDBC67287CB10E00481281 /* Assets.xcassets */; };
 		54FDBC6B287CB10E00481281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FDBC69287CB10E00481281 /* LaunchScreen.storyboard */; };
 		54FDBC6E287CB10E00481281 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC6D287CB10E00481281 /* main.m */; };
+		7319F36144D9DD43B6B4796F /* Pods_GroceryMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CEE849C3DDF24A5BA683DB /* Pods_GroceryMarket.framework */; };
+		BE427E25287CD70A001A1E00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE427E24287CD70A001A1E00 /* GoogleService-Info.plist */; };
+		BE427E38287CD732001A1E00 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E28287CD731001A1E00 /* RegisterViewController.m */; };
+		BE427E39287CD732001A1E00 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E29287CD731001A1E00 /* RegisterViewController.xib */; };
+		BE427E3A287CD732001A1E00 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E2C287CD731001A1E00 /* SignInViewController.m */; };
+		BE427E3B287CD732001A1E00 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E2D287CD731001A1E00 /* SignInViewController.xib */; };
+		BE427E3C287CD732001A1E00 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E30287CD731001A1E00 /* LandingViewController.m */; };
+		BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E35287CD731001A1E00 /* HomeViewController.m */; };
+		BE427E3F287CD732001A1E00 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E36287CD732001A1E00 /* HomeViewController.xib */; };
+		BE427E45287CD98F001A1E00 /* GroceryCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E44287CD98F001A1E00 /* GroceryCommonFunction.m */; };
+		BE427E4B287E9AB9001A1E00 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E49287E9AB8001A1E00 /* WelcomeViewController.m */; };
+		BE427E4C287E9AB9001A1E00 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E4A287E9AB8001A1E00 /* WelcomeViewController.xib */; };
+		BE427E50287E9AD0001A1E00 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E4E287E9AD0001A1E00 /* SearchViewController.m */; };
+		BE427E51287E9AD0001A1E00 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E4F287E9AD0001A1E00 /* SearchViewController.xib */; };
+		BE427E56287EB1EF001A1E00 /* GroceryHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E54287EB1EF001A1E00 /* GroceryHomeViewController.m */; };
+		BE427E57287EB1EF001A1E00 /* GroceryHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E55287EB1EF001A1E00 /* GroceryHomeViewController.xib */; };
+		BE427E5C287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E5A287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m */; };
+		BE427E5D287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E5B287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.debug.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.debug.xcconfig"; sourceTree = "<group>"; };
 		54FDBC58287CB10D00481281 /* GroceryMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDBC5B287CB10D00481281 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDBC5C287CB10D00481281 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +48,35 @@
 		54FDBC6A287CB10E00481281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FDBC6C287CB10E00481281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54FDBC6D287CB10E00481281 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE427E24287CD70A001A1E00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE427E28287CD731001A1E00 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		BE427E29287CD731001A1E00 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		BE427E2A287CD731001A1E00 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		BE427E2C287CD731001A1E00 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		BE427E2D287CD731001A1E00 /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		BE427E2E287CD731001A1E00 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		BE427E30287CD731001A1E00 /* LandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandingViewController.m; sourceTree = "<group>"; };
+		BE427E33287CD731001A1E00 /* LandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandingViewController.h; sourceTree = "<group>"; };
+		BE427E35287CD731001A1E00 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BE427E36287CD732001A1E00 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		BE427E37287CD732001A1E00 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BE427E41287CD8B0001A1E00 /* Grocery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grocery-Prefix.pch"; sourceTree = "<group>"; };
+		BE427E43287CD98F001A1E00 /* GroceryCommonFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryCommonFunction.h; sourceTree = "<group>"; };
+		BE427E44287CD98F001A1E00 /* GroceryCommonFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryCommonFunction.m; sourceTree = "<group>"; };
+		BE427E48287E9AB8001A1E00 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		BE427E49287E9AB8001A1E00 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		BE427E4A287E9AB8001A1E00 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		BE427E4D287E9AD0001A1E00 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		BE427E4E287E9AD0001A1E00 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		BE427E4F287E9AD0001A1E00 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		BE427E53287EB1EF001A1E00 /* GroceryHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryHomeViewController.h; sourceTree = "<group>"; };
+		BE427E54287EB1EF001A1E00 /* GroceryHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryHomeViewController.m; sourceTree = "<group>"; };
+		BE427E55287EB1EF001A1E00 /* GroceryHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryHomeViewController.xib; sourceTree = "<group>"; };
+		BE427E59287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		BE427E5A287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		BE427E5B287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8CEE849C3DDF24A5BA683DB /* Pods_GroceryMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E67D131A858D19BC50B2A055 /* Pods-GroceryMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.release.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7319F36144D9DD43B6B4796F /* Pods_GroceryMarket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +96,8 @@
 			children = (
 				54FDBC5A287CB10D00481281 /* GroceryMarket */,
 				54FDBC59287CB10D00481281 /* Products */,
+				5BF3512F3998DA4B56852C0F /* Pods */,
+				E26AD8B41653187BB05B29C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +112,151 @@
 		54FDBC5A287CB10D00481281 /* GroceryMarket */ = {
 			isa = PBXGroup;
 			children = (
+				BE427E26287CD731001A1E00 /* ViewControllers */,
+				BE427E40287CD885001A1E00 /* SupportingFiles */,
+				BE427E42287CD8D5001A1E00 /* GroceryHelperClasses */,
 				54FDBC5B287CB10D00481281 /* AppDelegate.h */,
 				54FDBC5C287CB10D00481281 /* AppDelegate.m */,
 				54FDBC5E287CB10D00481281 /* SceneDelegate.h */,
 				54FDBC5F287CB10D00481281 /* SceneDelegate.m */,
 				54FDBC61287CB10D00481281 /* ViewController.h */,
 				54FDBC62287CB10D00481281 /* ViewController.m */,
-				54FDBC64287CB10D00481281 /* Main.storyboard */,
 				54FDBC67287CB10E00481281 /* Assets.xcassets */,
 				54FDBC69287CB10E00481281 /* LaunchScreen.storyboard */,
 				54FDBC6C287CB10E00481281 /* Info.plist */,
+				BE427E24287CD70A001A1E00 /* GoogleService-Info.plist */,
 				54FDBC6D287CB10E00481281 /* main.m */,
 			);
 			path = GroceryMarket;
+			sourceTree = "<group>";
+		};
+		5BF3512F3998DA4B56852C0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */,
+				E67D131A858D19BC50B2A055 /* Pods-GroceryMarket.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE427E26287CD731001A1E00 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */,
+				BE427E47287E9A9B001A1E00 /* SearchViewController */,
+				BE427E46287E9A8B001A1E00 /* WelcomeViewController */,
+				BE427E27287CD731001A1E00 /* RegisterViewController */,
+				BE427E2B287CD731001A1E00 /* SignInViewController */,
+				BE427E2F287CD731001A1E00 /* LandingViewController */,
+				BE427E34287CD731001A1E00 /* HomeViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BE427E27287CD731001A1E00 /* RegisterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E28287CD731001A1E00 /* RegisterViewController.m */,
+				BE427E29287CD731001A1E00 /* RegisterViewController.xib */,
+				BE427E2A287CD731001A1E00 /* RegisterViewController.h */,
+			);
+			path = RegisterViewController;
+			sourceTree = "<group>";
+		};
+		BE427E2B287CD731001A1E00 /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E2C287CD731001A1E00 /* SignInViewController.m */,
+				BE427E2D287CD731001A1E00 /* SignInViewController.xib */,
+				BE427E2E287CD731001A1E00 /* SignInViewController.h */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		BE427E2F287CD731001A1E00 /* LandingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E30287CD731001A1E00 /* LandingViewController.m */,
+				BE427E33287CD731001A1E00 /* LandingViewController.h */,
+				54FDBC64287CB10D00481281 /* Main.storyboard */,
+			);
+			path = LandingViewController;
+			sourceTree = "<group>";
+		};
+		BE427E34287CD731001A1E00 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E35287CD731001A1E00 /* HomeViewController.m */,
+				BE427E36287CD732001A1E00 /* HomeViewController.xib */,
+				BE427E37287CD732001A1E00 /* HomeViewController.h */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		BE427E40287CD885001A1E00 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E41287CD8B0001A1E00 /* Grocery-Prefix.pch */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BE427E42287CD8D5001A1E00 /* GroceryHelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E43287CD98F001A1E00 /* GroceryCommonFunction.h */,
+				BE427E44287CD98F001A1E00 /* GroceryCommonFunction.m */,
+			);
+			path = GroceryHelperClasses;
+			sourceTree = "<group>";
+		};
+		BE427E46287E9A8B001A1E00 /* WelcomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E48287E9AB8001A1E00 /* WelcomeViewController.h */,
+				BE427E49287E9AB8001A1E00 /* WelcomeViewController.m */,
+				BE427E4A287E9AB8001A1E00 /* WelcomeViewController.xib */,
+			);
+			path = WelcomeViewController;
+			sourceTree = "<group>";
+		};
+		BE427E47287E9A9B001A1E00 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E4D287E9AD0001A1E00 /* SearchViewController.h */,
+				BE427E4E287E9AD0001A1E00 /* SearchViewController.m */,
+				BE427E4F287E9AD0001A1E00 /* SearchViewController.xib */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E58287EB22E001A1E00 /* GroceryHomeCollectionViewCell */,
+				BE427E53287EB1EF001A1E00 /* GroceryHomeViewController.h */,
+				BE427E54287EB1EF001A1E00 /* GroceryHomeViewController.m */,
+				BE427E55287EB1EF001A1E00 /* GroceryHomeViewController.xib */,
+			);
+			path = GroceryHomeViewController;
+			sourceTree = "<group>";
+		};
+		BE427E58287EB22E001A1E00 /* GroceryHomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BE427E59287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.h */,
+				BE427E5A287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m */,
+				BE427E5B287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib */,
+			);
+			path = GroceryHomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E26AD8B41653187BB05B29C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8CEE849C3DDF24A5BA683DB /* Pods_GroceryMarket.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54FDBC71287CB10E00481281 /* Build configuration list for PBXNativeTarget "GroceryMarket" */;
 			buildPhases = (
+				6B05C636CEE5796F69F666E4 /* [CP] Check Pods Manifest.lock */,
 				54FDBC54287CB10D00481281 /* Sources */,
 				54FDBC55287CB10D00481281 /* Frameworks */,
 				54FDBC56287CB10D00481281 /* Resources */,
+				048AC5B81F3DD86BEDBC3412 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,22 +319,81 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FDBC6B287CB10E00481281 /* LaunchScreen.storyboard in Resources */,
+				BE427E39287CD732001A1E00 /* RegisterViewController.xib in Resources */,
+				BE427E25287CD70A001A1E00 /* GoogleService-Info.plist in Resources */,
 				54FDBC68287CB10E00481281 /* Assets.xcassets in Resources */,
+				BE427E3B287CD732001A1E00 /* SignInViewController.xib in Resources */,
+				BE427E57287EB1EF001A1E00 /* GroceryHomeViewController.xib in Resources */,
+				BE427E51287E9AD0001A1E00 /* SearchViewController.xib in Resources */,
+				BE427E4C287E9AB9001A1E00 /* WelcomeViewController.xib in Resources */,
 				54FDBC66287CB10D00481281 /* Main.storyboard in Resources */,
+				BE427E5D287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib in Resources */,
+				BE427E3F287CD732001A1E00 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		048AC5B81F3DD86BEDBC3412 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B05C636CEE5796F69F666E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GroceryMarket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		54FDBC54287CB10D00481281 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE427E38287CD732001A1E00 /* RegisterViewController.m in Sources */,
+				BE427E3C287CD732001A1E00 /* LandingViewController.m in Sources */,
 				54FDBC63287CB10D00481281 /* ViewController.m in Sources */,
+				BE427E5C287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m in Sources */,
 				54FDBC5D287CB10D00481281 /* AppDelegate.m in Sources */,
 				54FDBC6E287CB10E00481281 /* main.m in Sources */,
+				BE427E4B287E9AB9001A1E00 /* WelcomeViewController.m in Sources */,
+				BE427E45287CD98F001A1E00 /* GroceryCommonFunction.m in Sources */,
+				BE427E3A287CD732001A1E00 /* SignInViewController.m in Sources */,
+				BE427E50287E9AD0001A1E00 /* SearchViewController.m in Sources */,
+				BE427E56287EB1EF001A1E00 /* GroceryHomeViewController.m in Sources */,
 				54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */,
+				BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +531,14 @@
 		};
 		54FDBC72287CB10E00481281 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49BFYP4T4J;
+				GCC_PREFIX_HEADER = "GroceryMarket/SupportingFiles/Grocery-Prefix.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GroceryMarket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +546,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,12 +561,14 @@
 		};
 		54FDBC73287CB10E00481281 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E67D131A858D19BC50B2A055 /* Pods-GroceryMarket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 49BFYP4T4J;
+				GCC_PREFIX_HEADER = "GroceryMarket/SupportingFiles/Grocery-Prefix.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GroceryMarket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,6 +576,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
