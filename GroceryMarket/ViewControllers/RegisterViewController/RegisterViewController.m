@@ -22,7 +22,28 @@
     // Do any additional setup after loading the view.
 }
 
+<<<<<<< HEAD
 
+=======
+//- (void)registerUser {
+//    PFUser *newUser = [PFUser user];
+//
+//    newUser.username = self.usernameField.text;
+//    newUser.password = self.passwordField.text;
+//    newUser.email = self.emailField.text;
+//
+//
+//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+//        if (error != nil) {
+//            NSLog(@"Error: %@", error.localizedDescription);
+//        } else {
+//            NSLog(@"User registered successfully");
+//            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
+//            // manually segue to logged in view
+//        }
+//    }];
+//}
+>>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
 // MARK: Create User
 - (void)createUser {
     NSString *email = self.emailField.text;
@@ -36,7 +57,11 @@
                                password:password
                              completion:^(FIRAuthDataResult * _Nullable authResult,
                                           NSError * _Nullable error) {
+<<<<<<< HEAD
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
+=======
+        [[GroceryCommonFunction shared] hideLoadingView:theLoadingView];
+>>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
         if ([error isEqual:nil]) {
             [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
                 NSLog(@"The app is logged in successfully");
