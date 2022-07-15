@@ -7,11 +7,18 @@
 
 #import "HomeViewController.h"
 <<<<<<< HEAD
+#import "GroceryHomeViewController.h"
+#import "SearchViewController.h"
+#import "WelcomeViewController.h"
+
+=======
+<<<<<<< HEAD
 #import "SearchViewController.h"
 #import "WelcomeViewController.h"
 
 =======
 >>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
 
 @interface HomeViewController ()
 @property (nonatomic, strong )NSArray *groceryArray;
@@ -22,6 +29,19 @@
 <<<<<<< HEAD
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    GroceryHomeViewController *groceryhomeVC = [[GroceryHomeViewController alloc] init];
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    WelcomeViewController *welcomeVC = [[WelcomeViewController alloc] init];
+    
+    [groceryhomeVC.tabBarItem setTitle:@"Home"];
+    [welcomeVC.tabBarItem setTitle:@"Profile"];
+    [searchVC.tabBarItem setTitle:@"Search"];
+    
+    [self setViewControllers:[NSArray arrayWithObjects:groceryhomeVC, searchVC, welcomeVC, nil]];
+=======
+<<<<<<< HEAD
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     WelcomeViewController *welcomeVC = [[WelcomeViewController alloc] init];
     
@@ -29,10 +49,13 @@
     [welcomeVC.tabBarItem setTitle:@"Welcome"];
     
     [self setViewControllers:[NSArray arrayWithObjects:searchVC, welcomeVC, nil]];
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
     
 }
 
 
+<<<<<<< HEAD
+=======
 =======
 //- (void)viewDidLoad {
 //    [super viewDidLoad];
@@ -63,4 +86,5 @@
 //}
 >>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
       
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
 @end

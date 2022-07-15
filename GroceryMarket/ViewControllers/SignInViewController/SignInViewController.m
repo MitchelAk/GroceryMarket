@@ -30,8 +30,12 @@
 <<<<<<< HEAD
         [[GroceryCommonFunction shared] hideLoadingView:theLoadingView];
 =======
+<<<<<<< HEAD
+        [[GroceryCommonFunction shared] hideLoadingView:theLoadingView];
+=======
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
 >>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
         HomeViewController  *homeVC = [[HomeViewController alloc] init];
         [self.navigationController pushViewController: homeVC animated:YES];
         NSLog(@"The app is logged in successfully");

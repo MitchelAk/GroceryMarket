@@ -23,8 +23,11 @@
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
 //- (void)registerUser {
 //    PFUser *newUser = [PFUser user];
 //
@@ -43,7 +46,10 @@
 //        }
 //    }];
 //}
+<<<<<<< HEAD
+=======
 >>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
 // MARK: Create User
 - (void)createUser {
     NSString *email = self.emailField.text;
@@ -58,10 +64,14 @@
                              completion:^(FIRAuthDataResult * _Nullable authResult,
                                           NSError * _Nullable error) {
 <<<<<<< HEAD
+        [[GroceryCommonFunction shared] hideLoadingView:theLoadingView];
+=======
+<<<<<<< HEAD
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
 =======
         [[GroceryCommonFunction shared] hideLoadingView:theLoadingView];
 >>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
+>>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
         if ([error isEqual:nil]) {
             [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
                 NSLog(@"The app is logged in successfully");
