@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 @import FirebaseCore;
+@import FirebaseFirestore;
+@import FirebaseAuth;
 
 @interface AppDelegate ()
 
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [FIRApp configure];
+    //[FIRStorage *storage] = [FIRStorage storage];
     return YES;
 }
 

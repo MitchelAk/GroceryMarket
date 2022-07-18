@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		548E24172885D6D500596A7F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E24152885D6D500596A7F /* ProfileViewController.m */; };
+		548E24182885D6D500596A7F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548E24162885D6D500596A7F /* ProfileViewController.xib */; };
 		54FDBC5D287CB10D00481281 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC5C287CB10D00481281 /* AppDelegate.m */; };
 		54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC5F287CB10D00481281 /* SceneDelegate.m */; };
 		54FDBC63287CB10D00481281 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC62287CB10D00481281 /* ViewController.m */; };
@@ -15,6 +17,9 @@
 		54FDBC6B287CB10E00481281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54FDBC69287CB10E00481281 /* LaunchScreen.storyboard */; };
 		54FDBC6E287CB10E00481281 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC6D287CB10E00481281 /* main.m */; };
 		7319F36144D9DD43B6B4796F /* Pods_GroceryMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8CEE849C3DDF24A5BA683DB /* Pods_GroceryMarket.framework */; };
+		BE0DC05A2883762B00B2256F /* CartsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0DC0582883762B00B2256F /* CartsViewController.m */; };
+		BE0DC05B2883762B00B2256F /* CartsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE0DC0592883762B00B2256F /* CartsViewController.xib */; };
+		BE0DC05F288393B200B2256F /* Grocery.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0DC05E288393B200B2256F /* Grocery.m */; };
 		BE427E25287CD70A001A1E00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE427E24287CD70A001A1E00 /* GoogleService-Info.plist */; };
 		BE427E38287CD732001A1E00 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E28287CD731001A1E00 /* RegisterViewController.m */; };
 		BE427E39287CD732001A1E00 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E29287CD731001A1E00 /* RegisterViewController.xib */; };
@@ -24,20 +29,19 @@
 		BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E35287CD731001A1E00 /* HomeViewController.m */; };
 		BE427E3F287CD732001A1E00 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E36287CD732001A1E00 /* HomeViewController.xib */; };
 		BE427E45287CD98F001A1E00 /* GroceryCommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E44287CD98F001A1E00 /* GroceryCommonFunction.m */; };
-
-		BE427E4B287E9AB9001A1E00 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E49287E9AB8001A1E00 /* WelcomeViewController.m */; };
-		BE427E4C287E9AB9001A1E00 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E4A287E9AB8001A1E00 /* WelcomeViewController.xib */; };
 		BE427E50287E9AD0001A1E00 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E4E287E9AD0001A1E00 /* SearchViewController.m */; };
 		BE427E51287E9AD0001A1E00 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E4F287E9AD0001A1E00 /* SearchViewController.xib */; };
 		BE427E56287EB1EF001A1E00 /* GroceryHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E54287EB1EF001A1E00 /* GroceryHomeViewController.m */; };
 		BE427E57287EB1EF001A1E00 /* GroceryHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E55287EB1EF001A1E00 /* GroceryHomeViewController.xib */; };
-		BE427E5C287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E5A287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m */; };
-		BE427E5D287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E5B287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib */; };
-
+		BE427E61287F7A04001A1E00 /* GroceryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE427E5F287F7A04001A1E00 /* GroceryCollectionViewCell.m */; };
+		BE427E62287F7A05001A1E00 /* GroceryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE427E60287F7A04001A1E00 /* GroceryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.debug.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.debug.xcconfig"; sourceTree = "<group>"; };
+		548E24142885D6D500596A7F /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		548E24152885D6D500596A7F /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		548E24162885D6D500596A7F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		54FDBC58287CB10D00481281 /* GroceryMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDBC5B287CB10D00481281 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDBC5C287CB10D00481281 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +54,11 @@
 		54FDBC6A287CB10E00481281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54FDBC6C287CB10E00481281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54FDBC6D287CB10E00481281 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE0DC0572883762B00B2256F /* CartsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartsViewController.h; sourceTree = "<group>"; };
+		BE0DC0582883762B00B2256F /* CartsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartsViewController.m; sourceTree = "<group>"; };
+		BE0DC0592883762B00B2256F /* CartsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartsViewController.xib; sourceTree = "<group>"; };
+		BE0DC05D288393B200B2256F /* Grocery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grocery.h; sourceTree = "<group>"; };
+		BE0DC05E288393B200B2256F /* Grocery.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery.m; sourceTree = "<group>"; };
 		BE427E24287CD70A001A1E00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE427E28287CD731001A1E00 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		BE427E29287CD731001A1E00 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -65,21 +74,15 @@
 		BE427E41287CD8B0001A1E00 /* Grocery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grocery-Prefix.pch"; sourceTree = "<group>"; };
 		BE427E43287CD98F001A1E00 /* GroceryCommonFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryCommonFunction.h; sourceTree = "<group>"; };
 		BE427E44287CD98F001A1E00 /* GroceryCommonFunction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryCommonFunction.m; sourceTree = "<group>"; };
-
-		BE427E48287E9AB8001A1E00 /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
-		BE427E49287E9AB8001A1E00 /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		BE427E4A287E9AB8001A1E00 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		BE427E4D287E9AD0001A1E00 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		BE427E4E287E9AD0001A1E00 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		BE427E4F287E9AD0001A1E00 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		BE427E53287EB1EF001A1E00 /* GroceryHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryHomeViewController.h; sourceTree = "<group>"; };
 		BE427E54287EB1EF001A1E00 /* GroceryHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryHomeViewController.m; sourceTree = "<group>"; };
 		BE427E55287EB1EF001A1E00 /* GroceryHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryHomeViewController.xib; sourceTree = "<group>"; };
-		BE427E59287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryHomeCollectionViewCell.h; sourceTree = "<group>"; };
-		BE427E5A287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryHomeCollectionViewCell.m; sourceTree = "<group>"; };
-		BE427E5B287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryHomeCollectionViewCell.xib; sourceTree = "<group>"; };
-
-
+		BE427E5E287F7A04001A1E00 /* GroceryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceryCollectionViewCell.h; sourceTree = "<group>"; };
+		BE427E5F287F7A04001A1E00 /* GroceryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceryCollectionViewCell.m; sourceTree = "<group>"; };
+		BE427E60287F7A04001A1E00 /* GroceryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D8CEE849C3DDF24A5BA683DB /* Pods_GroceryMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67D131A858D19BC50B2A055 /* Pods-GroceryMarket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.release.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		548E24102885D5CF00596A7F /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				548E24142885D6D500596A7F /* ProfileViewController.h */,
+				548E24152885D6D500596A7F /* ProfileViewController.m */,
+				548E24162885D6D500596A7F /* ProfileViewController.xib */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		54FDBC4F287CB10D00481281 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BE427E26287CD731001A1E00 /* ViewControllers */,
+				BE0DC05C2883926E00B2256F /* Model */,
 				BE427E40287CD885001A1E00 /* SupportingFiles */,
 				BE427E42287CD8D5001A1E00 /* GroceryHelperClasses */,
 				54FDBC5B287CB10D00481281 /* AppDelegate.h */,
@@ -144,23 +158,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BE0DC0562883760900B2256F /* CartsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BE0DC0572883762B00B2256F /* CartsViewController.h */,
+				BE0DC0582883762B00B2256F /* CartsViewController.m */,
+				BE0DC0592883762B00B2256F /* CartsViewController.xib */,
+			);
+			path = CartsViewController;
+			sourceTree = "<group>";
+		};
+		BE0DC05C2883926E00B2256F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE0DC05D288393B200B2256F /* Grocery.h */,
+				BE0DC05E288393B200B2256F /* Grocery.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BE427E26287CD731001A1E00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-
-				BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */,
-				BE427E47287E9A9B001A1E00 /* SearchViewController */,
-				BE427E46287E9A8B001A1E00 /* WelcomeViewController */,
-
-				BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */,
-				BE427E47287E9A9B001A1E00 /* SearchViewController */,
-				BE427E46287E9A8B001A1E00 /* WelcomeViewController */,
-
-
+				548E24102885D5CF00596A7F /* ProfileViewController */,
+				BE427E2F287CD731001A1E00 /* LandingViewController */,
 				BE427E27287CD731001A1E00 /* RegisterViewController */,
 				BE427E2B287CD731001A1E00 /* SignInViewController */,
-				BE427E2F287CD731001A1E00 /* LandingViewController */,
 				BE427E34287CD731001A1E00 /* HomeViewController */,
+				BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */,
+				BE0DC0562883760900B2256F /* CartsViewController */,
+				BE427E47287E9A9B001A1E00 /* SearchViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,16 +248,6 @@
 			);
 			path = GroceryHelperClasses;
 			sourceTree = "<group>";
-
-		BE427E46287E9A8B001A1E00 /* WelcomeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BE427E48287E9AB8001A1E00 /* WelcomeViewController.h */,
-				BE427E49287E9AB8001A1E00 /* WelcomeViewController.m */,
-				BE427E4A287E9AB8001A1E00 /* WelcomeViewController.xib */,
-			);
-			path = WelcomeViewController;
-			sourceTree = "<group>";
 		};
 		BE427E47287E9A9B001A1E00 /* SearchViewController */ = {
 			isa = PBXGroup;
@@ -245,7 +262,7 @@
 		BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BE427E58287EB22E001A1E00 /* GroceryHomeCollectionViewCell */,
+				BE427E63287F7A20001A1E00 /* GroceryCollectionViewCell */,
 				BE427E53287EB1EF001A1E00 /* GroceryHomeViewController.h */,
 				BE427E54287EB1EF001A1E00 /* GroceryHomeViewController.m */,
 				BE427E55287EB1EF001A1E00 /* GroceryHomeViewController.xib */,
@@ -253,17 +270,16 @@
 			path = GroceryHomeViewController;
 			sourceTree = "<group>";
 		};
-		BE427E58287EB22E001A1E00 /* GroceryHomeCollectionViewCell */ = {
+		BE427E63287F7A20001A1E00 /* GroceryCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				BE427E59287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.h */,
-				BE427E5A287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m */,
-				BE427E5B287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib */,
+				BE427E5E287F7A04001A1E00 /* GroceryCollectionViewCell.h */,
+				BE427E5F287F7A04001A1E00 /* GroceryCollectionViewCell.m */,
+				BE427E60287F7A04001A1E00 /* GroceryCollectionViewCell.xib */,
 			);
-			path = GroceryHomeCollectionViewCell;
+			path = GroceryCollectionViewCell;
 			sourceTree = "<group>";
 		};
-
 		E26AD8B41653187BB05B29C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,19 +348,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FDBC6B287CB10E00481281 /* LaunchScreen.storyboard in Resources */,
+				BE0DC05B2883762B00B2256F /* CartsViewController.xib in Resources */,
 				BE427E39287CD732001A1E00 /* RegisterViewController.xib in Resources */,
 				BE427E25287CD70A001A1E00 /* GoogleService-Info.plist in Resources */,
 				54FDBC68287CB10E00481281 /* Assets.xcassets in Resources */,
+				BE427E62287F7A05001A1E00 /* GroceryCollectionViewCell.xib in Resources */,
+				548E24182885D6D500596A7F /* ProfileViewController.xib in Resources */,
 				BE427E3B287CD732001A1E00 /* SignInViewController.xib in Resources */,
-
 				BE427E57287EB1EF001A1E00 /* GroceryHomeViewController.xib in Resources */,
 				BE427E51287E9AD0001A1E00 /* SearchViewController.xib in Resources */,
-				BE427E4C287E9AB9001A1E00 /* WelcomeViewController.xib in Resources */,
 				54FDBC66287CB10D00481281 /* Main.storyboard in Resources */,
-				BE427E5D287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.xib in Resources */,
-
-	54FDBC66287CB10D00481281 /* Main.storyboard in Resources */,
-
 				BE427E3F287CD732001A1E00 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,19 +416,17 @@
 				54FDBC63287CB10D00481281 /* ViewController.m in Sources */,
 				BE427E5C287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m in Sources */,
 				54FDBC5D287CB10D00481281 /* AppDelegate.m in Sources */,
+				548E24172885D6D500596A7F /* ProfileViewController.m in Sources */,
 				54FDBC6E287CB10E00481281 /* main.m in Sources */,
-
-				BE427E4B287E9AB9001A1E00 /* WelcomeViewController.m in Sources */,
 				BE427E45287CD98F001A1E00 /* GroceryCommonFunction.m in Sources */,
+				BE427E61287F7A04001A1E00 /* GroceryCollectionViewCell.m in Sources */,
 				BE427E3A287CD732001A1E00 /* SignInViewController.m in Sources */,
 				BE427E50287E9AD0001A1E00 /* SearchViewController.m in Sources */,
+				BE0DC05F288393B200B2256F /* Grocery.m in Sources */,
 				BE427E56287EB1EF001A1E00 /* GroceryHomeViewController.m in Sources */,
-
-				BE427E45287CD98F001A1E00 /* GroceryCommonFunction.m in Sources */,
-				BE427E3A287CD732001A1E00 /* SignInViewController.m in Sources */,
-
 				54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */,
 				BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */,
+				BE0DC05A2883762B00B2256F /* CartsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

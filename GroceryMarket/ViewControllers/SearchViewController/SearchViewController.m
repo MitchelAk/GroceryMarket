@@ -15,11 +15,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
     // Do any additional setup after loading the view from its nib.
     
 }
 
-<<<<<<< HEAD
 /*
 #pragma mark - Navigation
 
@@ -29,8 +29,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-=======
-
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
 
 @end

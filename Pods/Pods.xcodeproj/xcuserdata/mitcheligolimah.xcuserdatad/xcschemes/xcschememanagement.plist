@@ -4,200 +4,145 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BoringSSL-GRPC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Firebase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>0</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>0</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>2</integer>
 		</dict>
 		<key>FirebaseAnalytics.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>1</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>1</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>3</integer>
 		</dict>
 		<key>FirebaseAuth.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>2</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>2</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>4</integer>
 		</dict>
 		<key>FirebaseCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>3</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>3</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>5</integer>
 		</dict>
 		<key>FirebaseCoreDiagnostics.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>4</integer>
-=======
-<<<<<<< HEAD
+			<integer>6</integer>
+		</dict>
+		<key>FirebaseFirestore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>7</integer>
 		</dict>
 		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>5</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>5</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>8</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>9</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>9</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>15</integer>
 		</dict>
 		<key>GoogleAppMeasurement.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>6</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>6</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>9</integer>
 		</dict>
 		<key>GoogleDataTransport.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>7</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>7</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>10</integer>
 		</dict>
 		<key>GoogleUtilities.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>8</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>8</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>11</integer>
 		</dict>
 		<key>Pods-GroceryMarket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>11</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>11</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>18</integer>
 		</dict>
 		<key>PromisesObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
+		<key>abseil.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
+		<key>gRPC-C++.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
-=======
-<<<<<<< HEAD
+		</dict>
+		<key>gRPC-Core.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>12</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>14</integer>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>16</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-<<<<<<< HEAD
 			<key>orderHint</key>
-			<integer>10</integer>
-=======
-<<<<<<< HEAD
-			<key>orderHint</key>
-			<integer>10</integer>
-=======
->>>>>>> 310dd35b1cb4c87e57d055a03d5365a896dddf8f
->>>>>>> 22238c9bfb57c6cda60ed85c13636ad8968282ab
+			<integer>17</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

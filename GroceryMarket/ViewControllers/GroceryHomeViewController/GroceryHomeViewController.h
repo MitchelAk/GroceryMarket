@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GroceryHomeViewController : UIViewController
+@interface GroceryHomeViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
