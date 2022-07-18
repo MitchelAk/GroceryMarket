@@ -6,6 +6,9 @@
 //
 
 #import "AppDelegate.h"
+@import FirebaseCore;
+@import FirebaseFirestore;
+@import FirebaseAuth;
 
 @interface AppDelegate ()
 
@@ -15,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [FIRApp configure];
+    //[FIRStorage *storage] = [FIRStorage storage];
     return YES;
 }
 
