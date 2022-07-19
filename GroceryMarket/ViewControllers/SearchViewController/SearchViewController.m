@@ -37,4 +37,21 @@
     return cell;
 }
 
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if ([searchText length] == 0){
+        [displayGrocery removeAllObjects];
+        [displayGrocery addObjectsFromArray:groceryArray];
+    }else {
+        [displayGrocery removeAllObjects];
+        for (NSString * string in groceryArray){
+            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (r.location != NSNotFound){
+                [displayGrocery addObject:string];
+            }
+        }
+        
+    }
+    [tableView reloadData];
+}
+
 @end
