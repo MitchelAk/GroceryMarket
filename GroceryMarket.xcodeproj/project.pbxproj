@@ -183,7 +183,6 @@
 				548E24102885D5CF00596A7F /* ProfileViewController */,
 				BE427E2F287CD731001A1E00 /* LandingViewController */,
 				BE427E27287CD731001A1E00 /* RegisterViewController */,
-				BE427E2B287CD731001A1E00 /* SignInViewController */,
 				BE427E34287CD731001A1E00 /* HomeViewController */,
 				BE427E52287EB1CC001A1E00 /* GroceryHomeViewController */,
 				BE0DC0562883760900B2256F /* CartsViewController */,
@@ -195,9 +194,10 @@
 		BE427E27287CD731001A1E00 /* RegisterViewController */ = {
 			isa = PBXGroup;
 			children = (
-				BE427E28287CD731001A1E00 /* RegisterViewController.m */,
 				BE427E29287CD731001A1E00 /* RegisterViewController.xib */,
+				BE427E28287CD731001A1E00 /* RegisterViewController.m */,
 				BE427E2A287CD731001A1E00 /* RegisterViewController.h */,
+				BE427E2B287CD731001A1E00 /* SignInViewController */,
 			);
 			path = RegisterViewController;
 			sourceTree = "<group>";
@@ -414,7 +414,6 @@
 				BE427E38287CD732001A1E00 /* RegisterViewController.m in Sources */,
 				BE427E3C287CD732001A1E00 /* LandingViewController.m in Sources */,
 				54FDBC63287CB10D00481281 /* ViewController.m in Sources */,
-				BE427E5C287EB3CC001A1E00 /* GroceryHomeCollectionViewCell.m in Sources */,
 				54FDBC5D287CB10D00481281 /* AppDelegate.m in Sources */,
 				548E24172885D6D500596A7F /* ProfileViewController.m in Sources */,
 				54FDBC6E287CB10E00481281 /* main.m in Sources */,

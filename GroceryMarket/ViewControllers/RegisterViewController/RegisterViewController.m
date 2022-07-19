@@ -22,24 +22,6 @@
     // Do any additional setup after loading the view.
 }
 
-//- (void)registerUser {
-//    PFUser *newUser = [PFUser user];
-//
-//    newUser.username = self.usernameField.text;
-//    newUser.password = self.passwordField.text;
-//    newUser.email = self.emailField.text;
-//
-//
-//    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
-//        if (error != nil) {
-//            NSLog(@"Error: %@", error.localizedDescription);
-//        } else {
-//            NSLog(@"User registered successfully");
-//            [self performSegueWithIdentifier:@"FirstSegue" sender:nil];
-//            // manually segue to logged in view
-//        }
-//    }];
-//}
 // MARK: Create User
 - (void)createUser {
     NSString *email = self.emailField.text;
