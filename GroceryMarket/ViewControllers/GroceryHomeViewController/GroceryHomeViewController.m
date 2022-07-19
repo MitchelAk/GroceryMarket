@@ -94,7 +94,7 @@
     [self.groceryList addObject:grocery10];
     
     Grocery *grocery11 = Grocery.new;
-    grocery11.title = @"Vegetable Oil,";
+    grocery11.title = @"Vegetable Oil";
     grocery11.price = @"$3.27";
     grocery11.imageUrl = @"image11";
     [self.groceryList addObject:grocery11];

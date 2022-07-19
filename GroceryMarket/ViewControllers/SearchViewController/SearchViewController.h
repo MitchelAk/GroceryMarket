@@ -9,7 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SearchViewController : UIViewController
+@interface SearchViewController : UIViewController <UITableViewDataSource, UITableViewDataSource, UISearchBarDelegate> {
+    
+    IBOutlet UITableView * tableView;
+    IBOutlet UISearchBar * searchBar;
+    
+    NSArray * groceryArray;
+    NSMutableArray * displayGrocery;
+}
 
 @end
 
