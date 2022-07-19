@@ -47,6 +47,7 @@
             NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
             if (r.location != NSNotFound){
                 [displayGrocery addObject:string];
+                
             }
         }
         
