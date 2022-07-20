@@ -53,9 +53,7 @@
     
     CGRect loadingFrame = CGRectMake(40, 160, 240, 120);
     UIView *loadingView = [[UIView alloc] initWithFrame:loadingFrame];
-    //[loadingView setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     loadingView.center = [[[UIApplication sharedApplication] windows] firstObject].center;
-//    loadingView.center = [_kAppDelegate window].center; //self.currentView.center;
     [loadingView setBackgroundColor:[UIColor colorWithRed:242.0f/255.0f green:241.0f/255.0f blue:241.0/255.0f alpha:1.0f]];
     
     
