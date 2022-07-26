@@ -18,13 +18,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-06-HSe">
-                    <rect key="frame" x="-10" y="-19" width="437" height="915"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3vM-06-HSe">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 </mapView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3vM-06-HSe" secondAttribute="trailing" id="4SA-sj-G1J"/>
+                <constraint firstItem="3vM-06-HSe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Col-yf-eVp"/>
+                <constraint firstAttribute="bottom" secondItem="3vM-06-HSe" secondAttribute="bottom" id="aZ5-HV-vSW"/>
+                <constraint firstItem="3vM-06-HSe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kDC-bJ-wU0"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </view>
     </objects>
