@@ -11,6 +11,8 @@
 		548E24182885D6D500596A7F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548E24162885D6D500596A7F /* ProfileViewController.xib */; };
 		548E241D2888717C00596A7F /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E241B2888717C00596A7F /* BottomSheetViewController.m */; };
 		548E241E2888717C00596A7F /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548E241C2888717C00596A7F /* BottomSheetViewController.xib */; };
+		54C60906288F60FB0013E0F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C60904288F60FB0013E0F1 /* MapViewController.m */; };
+		54C60907288F60FB0013E0F1 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C60905288F60FB0013E0F1 /* MapViewController.xib */; };
 		54FDBC5D287CB10D00481281 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC5C287CB10D00481281 /* AppDelegate.m */; };
 		54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC5F287CB10D00481281 /* SceneDelegate.m */; };
 		54FDBC63287CB10D00481281 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FDBC62287CB10D00481281 /* ViewController.m */; };
@@ -47,6 +49,9 @@
 		548E241A2888717C00596A7F /* BottomSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetViewController.h; sourceTree = "<group>"; };
 		548E241B2888717C00596A7F /* BottomSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetViewController.m; sourceTree = "<group>"; };
 		548E241C2888717C00596A7F /* BottomSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetViewController.xib; sourceTree = "<group>"; };
+		54C60903288F60FB0013E0F1 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		54C60904288F60FB0013E0F1 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		54C60905288F60FB0013E0F1 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		54FDBC58287CB10D00481281 /* GroceryMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FDBC5B287CB10D00481281 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		54FDBC5C287CB10D00481281 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +129,16 @@
 			path = BottomSheetController;
 			sourceTree = "<group>";
 		};
+		54C60902288F60CC0013E0F1 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54C60903288F60FB0013E0F1 /* MapViewController.h */,
+				54C60904288F60FB0013E0F1 /* MapViewController.m */,
+				54C60905288F60FB0013E0F1 /* MapViewController.xib */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
 		54FDBC4F287CB10D00481281 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +210,7 @@
 		BE427E26287CD731001A1E00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				54C60902288F60CC0013E0F1 /* MapViewController */,
 				548E24192888713A00596A7F /* BottomSheetController */,
 				548E24102885D5CF00596A7F /* ProfileViewController */,
 				BE427E2F287CD731001A1E00 /* LandingViewController */,
@@ -316,6 +332,7 @@
 				54FDBC55287CB10D00481281 /* Frameworks */,
 				54FDBC56287CB10D00481281 /* Resources */,
 				048AC5B81F3DD86BEDBC3412 /* [CP] Embed Pods Frameworks */,
+				111C1860AE1F53CE2BAE58F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,6 +391,7 @@
 				BE427E57287EB1EF001A1E00 /* GroceryHomeViewController.xib in Resources */,
 				BE427E51287E9AD0001A1E00 /* SearchViewController.xib in Resources */,
 				54FDBC66287CB10D00481281 /* Main.storyboard in Resources */,
+				54C60907288F60FB0013E0F1 /* MapViewController.xib in Resources */,
 				548E241E2888717C00596A7F /* BottomSheetViewController.xib in Resources */,
 				BE427E3F287CD732001A1E00 /* HomeViewController.xib in Resources */,
 			);
@@ -397,6 +415,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		111C1860AE1F53CE2BAE58F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6B05C636CEE5796F69F666E4 /* [CP] Check Pods Manifest.lock */ = {
@@ -443,6 +478,7 @@
 				BE427E56287EB1EF001A1E00 /* GroceryHomeViewController.m in Sources */,
 				54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */,
 				BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */,
+				54C60906288F60FB0013E0F1 /* MapViewController.m in Sources */,
 				BE0DC05A2883762B00B2256F /* CartsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
