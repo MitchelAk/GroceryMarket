@@ -10,6 +10,7 @@ target 'GroceryMarket' do
     pod 'Firebase/Auth'
     pod 'Canvas'
     pod 'GoogleMaps'
+    pod 'FloatingTabBarController'
     
 
 end

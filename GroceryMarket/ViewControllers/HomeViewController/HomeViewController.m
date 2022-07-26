@@ -11,6 +11,7 @@
 #import "GroceryHomeViewController.h"
 #import "ProfileViewController.h"
 #import "MapViewController.h"
+#import "GroceryMarket-Swift.h"
 
 
 @interface HomeViewController ()
@@ -33,6 +34,13 @@
     [profileVC.tabBarItem setTitle:@"Account"];
     [mapVC.tabBarItem setTitle:@"Map"];
     
+//    self.tabBar.layer.masksToBounds = true;
+//    self.tabBar.layer.cornerRadius = 30;
+//    self.tabBar.layer.maskedCorners = kCALayerMinXMinYCorner | kCALayerMaxXMinYCorner;
+    // [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    TabBarFormat *tabFormat = [[TabBarFormat alloc] init];
+    [tabFormat ChangeRadiusOfTabBarItem:self.tabBar];
+    
     
     searchVC.tabBarItem.image = [UIImage imageNamed:@"search2.png"];
     cartsVC.tabBarItem.image = [UIImage imageNamed:@"cart.png"];
@@ -43,7 +51,6 @@
     
     
     [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, cartsVC, mapVC, profileVC, nil]];
-    
 }
       
 @end
