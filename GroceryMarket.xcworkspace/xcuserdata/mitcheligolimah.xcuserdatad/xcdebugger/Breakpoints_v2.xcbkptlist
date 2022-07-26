@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "27BC3761-F17F-49C4-91C1-FAA8693F8BBE"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D47C7B4-14A2-475A-81A4-DC9811A8CBDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GroceryMarket/Animation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Animation"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8D47C7B4-14A2-475A-81A4-DC9811A8CBDB - 4e7971a409ed6d92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GroceryMarket.Animation.__allocating_init() -&gt; GroceryMarket.Animation"
+                  moduleName = "GroceryMarket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheligolimah/codepath/GroceryMarket/GroceryMarket/Animation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "8D47C7B4-14A2-475A-81A4-DC9811A8CBDB - b9ee1a3ba9e978e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GroceryMarket.Animation.init() -&gt; GroceryMarket.Animation"
+                  moduleName = "GroceryMarket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheligolimah/codepath/GroceryMarket/GroceryMarket/Animation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "8D47C7B4-14A2-475A-81A4-DC9811A8CBDB - 5584b85e3f435656"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GroceryMarket.Animation.__deallocating_deinit"
+                  moduleName = "GroceryMarket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mitcheligolimah/codepath/GroceryMarket/GroceryMarket/Animation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
