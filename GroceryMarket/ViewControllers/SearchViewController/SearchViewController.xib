@@ -20,12 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-7S-9KA">
-                    <rect key="frame" x="0.0" y="53" width="394" height="843"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ja2-7S-9KA">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="l46-12-IiB">
-                        <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <textInputTraits key="textInputTraits"/>
                         <connections>
@@ -40,6 +39,14 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="Sf4-R9-kXW"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Sf4-R9-kXW" firstAttribute="trailing" secondItem="ja2-7S-9KA" secondAttribute="trailing" id="2Bt-Kl-DJj"/>
+                <constraint firstItem="ja2-7S-9KA" firstAttribute="top" secondItem="Sf4-R9-kXW" secondAttribute="top" id="4mc-gX-u3I"/>
+                <constraint firstItem="ja2-7S-9KA" firstAttribute="top" secondItem="Sf4-R9-kXW" secondAttribute="top" id="RpK-6q-FUa"/>
+                <constraint firstItem="Sf4-R9-kXW" firstAttribute="trailing" secondItem="ja2-7S-9KA" secondAttribute="trailing" id="k9P-5i-kG9"/>
+                <constraint firstItem="ja2-7S-9KA" firstAttribute="leading" secondItem="Sf4-R9-kXW" secondAttribute="leading" id="wyP-nI-9lc"/>
+                <constraint firstAttribute="bottom" secondItem="ja2-7S-9KA" secondAttribute="bottom" id="xh3-Qt-oPw"/>
+            </constraints>
             <point key="canvasLocation" x="31.884057971014496" y="182.8125"/>
         </view>
     </objects>
