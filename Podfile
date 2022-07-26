@@ -9,5 +9,7 @@ target 'GroceryMarket' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Canvas'
+    pod 'GoogleMaps'
+    
 
 end

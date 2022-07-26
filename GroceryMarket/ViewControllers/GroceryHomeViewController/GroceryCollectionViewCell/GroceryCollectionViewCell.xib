@@ -63,25 +63,12 @@
                             </stackView>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-ws-ZIW">
-                        <rect key="frame" x="170" y="0.0" width="38" height="31"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="31" id="FUT-al-IVr"/>
-                            <constraint firstAttribute="width" constant="38" id="eGa-qb-4FB"/>
-                        </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="suit.heart" catalog="system"/>
-                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Qqw-Mb-pPk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Gkt-XL-qPy"/>
-                <constraint firstAttribute="bottom" secondItem="TPC-ws-ZIW" secondAttribute="bottom" constant="195" id="aDE-M0-x7x"/>
-                <constraint firstItem="TPC-ws-ZIW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="d8x-Gp-lJ6"/>
-                <constraint firstAttribute="trailing" secondItem="TPC-ws-ZIW" secondAttribute="trailing" id="fc0-FV-gPg"/>
-                <constraint firstItem="TPC-ws-ZIW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="170" id="lQU-Pp-aur"/>
                 <constraint firstAttribute="trailing" secondItem="Qqw-Mb-pPk" secondAttribute="trailing" constant="20" id="mhD-Wc-4Kt"/>
                 <constraint firstItem="Qqw-Mb-pPk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="zAv-uU-cAW"/>
                 <constraint firstAttribute="bottom" secondItem="Qqw-Mb-pPk" secondAttribute="bottom" constant="10" id="zrp-2S-l5n"/>
@@ -98,7 +85,6 @@
     <resources>
         <image name="bean" width="612" height="612"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
