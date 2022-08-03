@@ -151,7 +151,7 @@
     
     Grocery *grocery20 = Grocery.new;
     grocery20.title = @"Beans Canned Vegetables";
-    grocery20.price = @"$11.98";
+    grocery20.price = @"$12.98";
     grocery20.imageUrl = @"image20";
     [self.groceryList addObject:grocery20];
     

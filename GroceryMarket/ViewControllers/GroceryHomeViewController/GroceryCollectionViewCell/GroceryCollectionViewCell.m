@@ -20,6 +20,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.layer.cornerRadius = 20;
+    [self.favoriteButton setTitle:@"" forState: UIControlStateNormal];
+    [self.cartButton setTitle:@"" forState: UIControlStateNormal];
     
 }
 
