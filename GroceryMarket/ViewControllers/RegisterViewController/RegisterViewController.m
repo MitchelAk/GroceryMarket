@@ -9,8 +9,11 @@
 #import "HomeViewController.h"
 @import FirebaseCore;
 @import FirebaseAuth;
+@import FirebaseFirestore;
 
 @interface RegisterViewController ()
+
+@property (readwrite, nonatomic) FIRFirestore *db;
 
 @end
 
@@ -20,12 +23,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [FIRApp configure];
+
+    self.db = [FIRFirestore firestore];
+
 }
 
 // MARK: Create User
 - (void)createUser {
     NSString *email = self.emailField.text;
     NSString *password = self.passwordField.text;
+    NSString *address = self.addressField.text;
+    NSString *phone = self.phoneField.text;
+    NSString *username = self.usernameField.text;
+
     
     /// Load activity indicator
     theLoadingView = [[GroceryCommonFunction shared] showLoadingView];
@@ -35,16 +46,37 @@
                                password:password
                              completion:^(FIRAuthDataResult * _Nullable authResult,
                                           NSError * _Nullable error) {
-        [[GroceryCommonFunction shared] hideLoadingView:theLoadingView];
+        [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
         if ([error isEqual:nil]) {
             [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
                 NSLog(@"The app is logged in successfully");
             }];
+            
+            NSString *uid = authResult.user.uid;
+        
+            [[[self.db collectionWithPath:@"users"]
+              documentWithPath: uid]
+              setData:@{
+                @"email":email,
+                @"phone":phone,
+                @"username":username,
+                @"address":address
+              } completion:^(NSError*  _Nullable error){
+                if(error != nil){
+                    NSLog(@"Error adding document: %@", error);
+                } else{
+                    NSLog(@"Document added with ID: %@", uid);
+                }
+            }];
+            
+            
+            
         } else {
             NSLog(@"error in create user %@", [error localizedDescription]);
             HomeViewController  *homeVC = [[HomeViewController alloc] init];
             [self.navigationController pushViewController: homeVC animated:YES];
         }
+        
         
     }];
 }
