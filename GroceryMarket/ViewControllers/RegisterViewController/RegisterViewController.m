@@ -51,8 +51,15 @@
                                           NSError * _Nullable error) {
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
         if (error == nil ) {
-            [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-                NSLog(@"The app is logged in successfully");
+            [[FIRAuth auth] signInWithEmail:email
+                                   password:password
+                                 completion:^(FIRAuthDataResult * _Nullable authResult,
+                                              NSError * _Nullable error) {
+                if(error == nil){
+                    NSLog(@"The app is logged in successfully");
+                }else{
+                    NSLog(@"Login not successful: %@", [error localizedDescription]);
+                }
             }];
             
             NSString *uid = authResult.user.uid;
@@ -66,7 +73,7 @@
                 @"address":address
               } completion:^(NSError *  _Nullable error){
                 if(error != nil){
-                    NSLog(@"Error adding document: %@", error);
+                    NSLog(@"Error adding document: %@", [error localizedDescription]);
                 } else{
                     NSLog(@"Document added with ID: %@", uid);
                 }
@@ -75,7 +82,7 @@
             
             
         } else {
-            NSLog(@"error in create user %@", [error localizedDescription]);
+            NSLog(@"error in create user: %@", [error localizedDescription]);
             HomeViewController  *homeVC = [[HomeViewController alloc] init];
             [self.navigationController pushViewController: homeVC animated:YES];
         }
