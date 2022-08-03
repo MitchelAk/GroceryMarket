@@ -169,11 +169,11 @@
     cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = grocery.price;
-//    [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
+    [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     return cell;
 }
 - (IBAction)clickEvent:(id)sender event:(id)event{
-    NSLog(@"You clicked fav: %@", event);
+    NSLog(@"You clicked fav");
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
