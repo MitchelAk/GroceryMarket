@@ -50,7 +50,7 @@
                              completion:^(FIRAuthDataResult * _Nullable authResult,
                                           NSError * _Nullable error) {
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
-        if (error != nil) {
+        if (error == nil ) {
 //            [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
 //                NSLog(@"The app is logged in successfully");
 //            }];
@@ -64,7 +64,7 @@
                 @"phone":phone,
                 @"username":username,
                 @"address":address
-              } completion:^(NSError*  _Nullable error){
+              } completion:^(NSError *  _Nullable error){
                 if(error != nil){
                     NSLog(@"Error adding document: %@", error);
                 } else{
