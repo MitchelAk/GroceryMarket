@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *groceryPrice;
 @property (weak, nonatomic) IBOutlet UILabel *groceryTitle;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet UIButton *buttonTap
 
 @end
 

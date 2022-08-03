@@ -56,6 +56,7 @@
                                  completion:^(FIRAuthDataResult * _Nullable authResult,
                                               NSError * _Nullable error) {
                 if(error == nil){
+                    
                     NSLog(@"The app is logged in successfully");
                     HomeViewController  *homeVC = [[HomeViewController alloc] init];
                     [self.navigationController pushViewController: homeVC animated:YES];
