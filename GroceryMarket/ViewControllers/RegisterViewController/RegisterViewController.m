@@ -47,10 +47,10 @@
                              completion:^(FIRAuthDataResult * _Nullable authResult,
                                           NSError * _Nullable error) {
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
-        if ([error isEqual:nil]) {
-            [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
-                NSLog(@"The app is logged in successfully");
-            }];
+        if (error != nil) {
+//            [[FIRAuth auth] signInWithEmail:email password:password completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+//                NSLog(@"The app is logged in successfully");
+//            }];
             
             NSString *uid = authResult.user.uid;
         
