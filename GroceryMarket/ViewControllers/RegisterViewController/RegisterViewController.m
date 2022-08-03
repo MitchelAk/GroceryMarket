@@ -18,6 +18,9 @@
 @end
 
 @implementation RegisterViewController
+- (IBAction)onTap:(id)sender {
+    [self.view endEditing:YES];
+}
 
 // MARK: UIViewController Lifecycle
 - (void)viewDidLoad {
