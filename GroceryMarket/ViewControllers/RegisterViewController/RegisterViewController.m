@@ -57,6 +57,9 @@
                                               NSError * _Nullable error) {
                 if(error == nil){
                     NSLog(@"The app is logged in successfully");
+                    HomeViewController  *homeVC = [[HomeViewController alloc] init];
+                    [self.navigationController pushViewController: homeVC animated:YES];
+
                 }else{
                     NSLog(@"Login not successful: %@", [error localizedDescription]);
                 }
@@ -83,8 +86,6 @@
             
         } else {
             NSLog(@"error in create user: %@", [error localizedDescription]);
-            HomeViewController  *homeVC = [[HomeViewController alloc] init];
-            [self.navigationController pushViewController: homeVC animated:YES];
         }
         
         
