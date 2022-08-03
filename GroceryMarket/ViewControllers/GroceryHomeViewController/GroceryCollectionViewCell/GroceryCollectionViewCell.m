@@ -5,8 +5,8 @@
 //
 
 #import "GroceryCollectionViewCell.h"
-@import FirebaseCore;
-@import FirebaseFirestore;
+//@import FirebaseCore;
+//@import FirebaseFirestore;
 
 
 @interface GroceryCollectionViewCell()
@@ -27,9 +27,9 @@
 
 - (IBAction)buttonTapped:(UIButton *)sender
 {
-    self.db = [FIRFirestore firestore];
+//    self.db = [FIRFirestore firestore];
 
-  NSLog(@"Button Tapped!");
+//  NSLog(@"Button Tapped!");
 }
 
 

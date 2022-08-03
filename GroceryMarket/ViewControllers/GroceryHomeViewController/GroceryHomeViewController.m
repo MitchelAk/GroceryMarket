@@ -173,7 +173,7 @@
     return cell;
 }
 - (IBAction)clickEvent:(id)sender event:(id)event{
-    NSLog(@"You clicked fav");
+    NSLog(@"You clicked fav: %@", sender);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
