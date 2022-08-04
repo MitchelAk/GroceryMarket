@@ -39,6 +39,8 @@
         [[[self.db collectionWithPath:@"users"] documentWithPath:uid] getDocumentWithCompletion:^(FIRDocumentSnapshot * _Nullable snapshot, NSError * _Nullable error ){
             if (snapshot.exists) {
                 NSLog(@"Document exists %@", snapshot.data);
+                NSString *address = snapshot.data[@"address"];
+                self.AddressField.text = address;
             }else{
                 NSLog(@"Document does not exist");
             }
