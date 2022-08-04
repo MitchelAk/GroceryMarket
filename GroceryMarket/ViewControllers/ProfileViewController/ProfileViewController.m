@@ -40,7 +40,18 @@
             if (snapshot.exists) {
                 NSLog(@"Document exists %@", snapshot.data);
                 NSString *address = snapshot.data[@"address"];
+                NSString *username = snapshot.data[@"username"];
+                NSString *email = snapshot.data[@"email"];
+                NSString *phone = snapshot.data[@"phone"];
+
+
                 self.AddressField.text = address;
+                self.PhoneField.text = phone;
+                self.UsernameField.text = username;
+                self.EmailField.text = email;
+
+                
+                
             }else{
                 NSLog(@"Document does not exist");
             }
