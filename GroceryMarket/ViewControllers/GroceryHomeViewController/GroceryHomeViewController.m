@@ -42,7 +42,8 @@
 -(void) setUpGrcoryList {
     self.groceryList = NSMutableArray.new;
     
-    [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+    [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
+        NSLog(@"Fetching docs");
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
