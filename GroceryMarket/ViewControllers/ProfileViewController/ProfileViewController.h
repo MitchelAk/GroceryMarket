@@ -10,7 +10,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProfileViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-- (IBAction)didTapLogout:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *UsernameField;
+@property (weak, nonatomic) IBOutlet UITextField *EmailField;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordField;
+@property (weak, nonatomic) IBOutlet UITextField *PhoneField;
+@property (weak, nonatomic) IBOutlet UITextField *AddressField;
+
 
 @end
 

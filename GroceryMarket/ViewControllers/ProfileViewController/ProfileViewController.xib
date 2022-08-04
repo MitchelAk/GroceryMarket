@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
             <connections>
+                <outlet property="AddressField" destination="5VI-O3-Uom" id="bLf-FU-are"/>
+                <outlet property="EmailField" destination="Jcu-m6-XkR" id="40e-q7-43K"/>
+                <outlet property="PasswordField" destination="3hv-4n-VAy" id="ZV8-fa-uoZ"/>
+                <outlet property="PhoneField" destination="eLy-rn-77P" id="Tdl-Rm-yHe"/>
+                <outlet property="UsernameField" destination="nPa-wA-YE7" id="xAk-kO-CQ7"/>
                 <outlet property="profileImage" destination="dAm-qo-h0H" id="Rdl-Qe-ium"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,6 +37,14 @@
                         <action selector="didTapLogout:" destination="-1" eventType="touchUpInside" id="Rev-mi-Afc"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-qo-h0H">
+                    <rect key="frame" x="160" y="65.5" width="120" height="61"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Aur-Vs-WoH" appends="YES" id="M9c-ot-1d5"/>
+                    </connections>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-aN-xB1">
                     <rect key="frame" x="35" y="145" width="90" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,19 +105,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5VI-O3-Uom">
-                    <rect key="frame" x="35" y="637" width="321" height="34"/>
+                    <rect key="frame" x="35" y="625" width="321" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-qo-h0H">
-                    <rect key="frame" x="160" y="65.5" width="120" height="61"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="Aur-Vs-WoH" appends="YES" id="M9c-ot-1d5"/>
-                    </connections>
-                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
