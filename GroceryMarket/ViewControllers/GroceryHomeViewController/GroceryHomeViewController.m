@@ -28,6 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.db = [FIRFirestore firestore];
+
     [self setUpGrcoryList];
     
     groceryCollectionView.delegate = self;
@@ -35,8 +38,13 @@
     
     [groceryCollectionView registerNib:[UINib nibWithNibName:@"GroceryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
     
-    self.db = [FIRFirestore firestore];
+    
+    [self loadproducts];
 
+}
+
+- (void) loadproducts {
+    NSLog(@"load pds");
 }
 
 -(void) setUpGrcoryList {
