@@ -56,7 +56,7 @@
                 gg.price = document.data[@"price"];
                 gg.imageUrl = @"image1";
                 
-                NSLog(@"pnames: %@", document.data[@"pname"]);
+                NSLog(@"pnames: %@", gg);
                 [self.groceryList addObject:gg];
             }
         }
