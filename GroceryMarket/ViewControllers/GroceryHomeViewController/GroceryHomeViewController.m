@@ -33,8 +33,6 @@
 
     [self setUpGrcoryList];
     
-    self.groceryList = NSMutableArray.new;
-
     groceryCollectionView.delegate = self;
     groceryCollectionView.dataSource = self;
     
@@ -44,6 +42,7 @@
 
 
 -(void) setUpGrcoryList {
+    self.groceryList = NSMutableArray.new;
     
     [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
         NSLog(@"Fetching docs");
@@ -51,11 +50,13 @@
             NSLog(@"Error getting documents: %@", error);
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
-                NSLog(@"%@ => %@", document.documentID, document.data);
+//                NSLog(@"%@ => %@", document.documentID, document.data);
                 Grocery *gg = Grocery.new;
                 gg.title = document.data[@"pname"];
                 gg.price = document.data[@"price"];
                 gg.imageUrl = @"image1";
+                
+                NSLog(@"pnames: %@", document.data[@"pname"]);
                 [self.groceryList addObject:gg];
             }
         }
