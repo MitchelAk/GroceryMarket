@@ -37,15 +37,9 @@
     groceryCollectionView.dataSource = self;
     
     [groceryCollectionView registerNib:[UINib nibWithNibName:@"GroceryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
-    
-    
-    [self loadproducts];
 
 }
 
-- (void) loadproducts {
-    NSLog(@"load pds");
-}
 
 -(void) setUpGrcoryList {
     self.groceryList = NSMutableArray.new;
@@ -57,6 +51,10 @@
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"%@ => %@", document.documentID, document.data);
+                Grocery *gg = Grocery.new;
+                gg.title = document.data[@"pname"];
+                gg.price = document.data[@"price"];
+                [self.groceryList addObject:gg];
             }
         }
     }];
