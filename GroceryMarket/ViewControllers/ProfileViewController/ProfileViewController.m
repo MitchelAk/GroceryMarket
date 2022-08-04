@@ -38,7 +38,7 @@
         NSLog(@"user id: %@", user.uid);
         [[[self.db collectionWithPath:@"users"] documentWithPath:uid] getDocumentWithCompletion:^(FIRDocumentSnapshot * _Nullable snapshot, NSError * _Nullable error ){
             if (snapshot.exists) {
-                NSLog(@"Document exists %@", snapshot);
+                NSLog(@"Document exists %@", snapshot.data);
             }else{
                 NSLog(@"Document does not exist");
             }
