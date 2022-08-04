@@ -8,6 +8,9 @@
 #import "GroceryHomeViewController.h"
 #import "GroceryCollectionViewCell.h"
 #import "Grocery.h"
+@import FirebaseCore;
+@import FirebaseFirestore;
+
 
 @interface GroceryHomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
     
@@ -15,6 +18,8 @@
     __weak IBOutlet UICollectionView *groceryCollectionView;
 }
 @property (nonatomic, strong) NSMutableArray<Grocery *> *groceryList;
+
+@property (readwrite, nonatomic) FIRFirestore *db;
 
 
 @end
@@ -29,10 +34,23 @@
     groceryCollectionView.dataSource = self;
     
     [groceryCollectionView registerNib:[UINib nibWithNibName:@"GroceryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
+    
+    self.db = [FIRFirestore firestore];
+
 }
 
 -(void) setUpGrcoryList {
     self.groceryList = NSMutableArray.new;
+    
+    [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Error getting documents: %@", error);
+        }else{
+            for (FIRDocumentSnapshot *document in snapshot.documents){
+                NSLog(@"%@ => %@", document.documentID, document.data);
+            }
+        }
+    }];
     
     Grocery *grocery1 = Grocery.new;
     grocery1.title = @"Gatorade Frost Thirst Quencher Sports Drink";

@@ -49,7 +49,6 @@
                 self.PhoneField.text = phone;
                 self.UsernameField.text = username;
                 self.EmailField.text = email;
-
                 
                 
             }else{
