@@ -195,9 +195,10 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GroceryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
     Grocery *grocery = self.groceryList[indexPath.row];
+    NSString *combPrice = [NSString stringWithFormat:@"%s%@", "$", grocery.price];
     cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
     cell.groceryTitle.text = grocery.title;
-    cell.groceryPrice.text = grocery.price;
+    cell.groceryPrice.text = combPrice;
 //    cell.cartButton.tag = grocery.title;
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
