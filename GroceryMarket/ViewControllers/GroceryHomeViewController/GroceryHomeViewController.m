@@ -33,6 +33,8 @@
 
     [self setUpGrcoryList];
     
+    self.groceryList = NSMutableArray.new;
+
     groceryCollectionView.delegate = self;
     groceryCollectionView.dataSource = self;
     
@@ -42,7 +44,6 @@
 
 
 -(void) setUpGrcoryList {
-    self.groceryList = NSMutableArray.new;
     
     [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
         NSLog(@"Fetching docs");
