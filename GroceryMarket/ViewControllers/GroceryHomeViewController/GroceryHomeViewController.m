@@ -45,6 +45,7 @@
     self.groceryList = NSMutableArray.new;
     
     [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
+        NSLog(@"Fetching docs");
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
@@ -55,10 +56,10 @@
                 grocery1.price = document.data[@"price"];
                 grocery1.imageUrl = @"image1";
                 
-//                NSLog(@"pnames: %@", document.data[@"pname"]);
+                NSLog(@"pnames: %@", document.data[@"pname"]);
                 [self.groceryList addObject:grocery1];
             }
-//            groceryCollectionView.reloadData;
+            groceryCollectionView.reloadData;
         }
     }];
     
@@ -192,28 +193,6 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    self.groceryList = NSMutableArray.new;
-
-    
-    [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
-        
-        NSLog(@"Fetching docs");
-        
-        if (error != nil) {
-            NSLog(@"Error getting documents: %@", error);
-        }else{
-            for (FIRDocumentSnapshot *document in snapshot.documents){
-                NSLog(@"pnames: %@", document.data[@"pname"]);
-
-                Grocery *grocery1 = Grocery.new;
-                grocery1.title = document.data[@"pname"];
-                grocery1.price = document.data[@"price"];
-                grocery1.imageUrl = @"image1";
-                [self.groceryList addObject:grocery1];
-            }
-        }
-    }];
     GroceryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
     Grocery *grocery = self.groceryList[indexPath.row];
     cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
