@@ -42,7 +42,6 @@
 
 
 -(void) setUpGrcoryList {
-    self.groceryList = NSMutableArray.new;
     
     [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
         NSLog(@"Fetching docs");
@@ -51,13 +50,15 @@
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
 //                NSLog(@"%@ => %@", document.documentID, document.data);
-                Grocery *gg = Grocery.new;
-                gg.title = document.data[@"pname"];
-                gg.price = document.data[@"price"];
-                gg.imageUrl = @"image1";
+                self.groceryList = NSMutableArray.new;
+
+                Grocery *grocery1 = Grocery.new;
+                grocery1.title = document.data[@"pname"];
+                grocery1.price = document.data[@"price"];
+                grocery1.imageUrl = @"image1";
                 
-                NSLog(@"pnames: %@", gg);
-                [self.groceryList addObject:gg];
+                NSLog(@"pnames: %@", document.data[@"pname"]);
+                [self.groceryList addObject:grocery1];
             }
         }
     }];
