@@ -169,7 +169,7 @@
     cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = grocery.price;
-    cell.cartButton.tag = grocery.title;
+//    cell.cartButton.tag = grocery.title;
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
     return cell;

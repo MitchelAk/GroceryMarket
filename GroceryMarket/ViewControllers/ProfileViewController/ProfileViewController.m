@@ -7,9 +7,13 @@
 
 #import "ProfileViewController.h"
 #import "LandingViewController.h"
+@import FirebaseCore;
+@import FirebaseFirestore;
+@import FirebaseAuth;
 
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (readwrite, nonatomic) FIRFirestore *db;
 
 @end
 
@@ -18,6 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.db = [FIRFirestore firestore];
+
+    [self getuserDetails];
+}
+
+
+- (void)getuserDetails{
+    FIRUser *user = [FIRAuth auth].currentUser;
+    NSString *uid = user.uid;
+    if (user) {
+        
+//        NSString *uid = user.uid;
+        NSLog(@"user id: %@", user.uid);
+        [[[self.db collectionWithPath:@"users"] documentWithPath:uid] getDocumentWithCompletion:^(FIRDocumentSnapshot * _Nullable snapshot, NSError * _Nullable error ){
+            if (snapshot.exists) {
+                NSLog(@"Document exists %@", snapshot);
+            }else{
+                NSLog(@"Document does not exist");
+            }
+            
+        }];
+    }
+
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
