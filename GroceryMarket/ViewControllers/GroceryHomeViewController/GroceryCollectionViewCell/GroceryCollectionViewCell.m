@@ -11,7 +11,7 @@
 
 @interface GroceryCollectionViewCell()
 
-@property (readwrite, nonatomic) FIRFirestore *db;
+//@property (readwrite, nonatomic) FIRFirestore *db;
 
 @end
 

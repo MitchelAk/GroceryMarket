@@ -169,13 +169,14 @@
     cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = grocery.price;
+    cell.cartButton.tag = indexPath.row;
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
     return cell;
 }
 - (IBAction)clickEvent:(id)sender event:(id)event{
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rindex inSection: 0];
-    NSLog(@"index: %@", indexPath);
+    NSLog(@"index: %ld", (long)indexPath.row);
     
 }
 
