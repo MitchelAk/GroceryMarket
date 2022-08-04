@@ -49,9 +49,9 @@
             NSLog(@"Error getting documents: %@", error);
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
-//                NSLog(@"%@ => %@", document.documentID, document.data);
-                self.groceryList = NSMutableArray.new;
+                self.groceryList = [[NSMutableArray alloc] init];
 
+//                NSLog(@"%@ => %@", document.documentID, document.data);
                 Grocery *grocery1 = Grocery.new;
                 grocery1.title = document.data[@"pname"];
                 grocery1.price = document.data[@"price"];
