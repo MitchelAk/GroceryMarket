@@ -17,7 +17,7 @@
     
     __weak IBOutlet UICollectionView *groceryCollectionView;
 }
-@property (nonatomic, strong) NSMutableArray<Grocery *> *groceryList;
+@property (nonatomic, strong) NSArray<Grocery *> *groceryList;
 
 @property (readwrite, nonatomic) FIRFirestore *db;
 
@@ -49,7 +49,7 @@
             NSLog(@"Error getting documents: %@", error);
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
-                self.groceryList = [[NSMutableArray alloc] init];
+                self.groceryList = [NSArray alloc];
 
 //                NSLog(@"%@ => %@", document.documentID, document.data);
                 Grocery *grocery1 = Grocery.new;
@@ -58,7 +58,7 @@
                 grocery1.imageUrl = @"image1";
                 
                 NSLog(@"pnames: %@", document.data[@"pname"]);
-                [self.groceryList addObject:grocery1];
+                [self.groceryList initWithObjects:grocery1, nil];
             }
         }
     }];
