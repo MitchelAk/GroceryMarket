@@ -170,10 +170,13 @@
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = grocery.price;
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
+    
     return cell;
 }
 - (IBAction)clickEvent:(id)sender event:(id)event{
-    NSLog(@"You clicked fav: %@", sender);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rindex inSection: 0];
+    NSLog(@"index: %@", indexPath);
+    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
