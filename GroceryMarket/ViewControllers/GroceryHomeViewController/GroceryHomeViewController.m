@@ -10,6 +10,7 @@
 #import "Grocery.h"
 @import FirebaseCore;
 @import FirebaseFirestore;
+@import FirebaseAuth;
 
 
 @interface GroceryHomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
@@ -56,7 +57,6 @@
                 grocery1.price = document.data[@"price"];
                 grocery1.imageUrl = @"image1";
                 
-                NSLog(@"pnames: %@", document.data[@"pname"]);
                 [self.groceryList addObject:grocery1];
             }
             groceryCollectionView.reloadData;
@@ -200,7 +200,6 @@
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     cell.cartButton.tag = indexPath.row;
-    NSLog(@"indexPath: %ld", (long)indexPath.row);
 
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
@@ -218,7 +217,25 @@
 
     Grocery *gg = self.groceryList[indexPath.row];
     
-    NSLog(@"index: %@", gg.title);
+    FIRUser *user = [FIRAuth auth].currentUser;
+    NSString *uid = user.uid;
+
+    if (user) {
+    [[[[self.db collectionWithPath:@"users"]
+      documentWithPath: uid] collectionWithPath:@"mycart"]
+      addDocumentWithData:@{
+        @"pname":gg.title,
+        @"price":gg.price,
+        @"image":gg.imageUrl
+      } completion:^(NSError *  _Nullable error){
+        if(error != nil){
+            NSLog(@"Error adding document: %@", [error localizedDescription]);
+        } else{
+            NSLog(@"Added product to your cart list: %@", uid);
+        }
+    }];
+        
+    }
     
 }
 
