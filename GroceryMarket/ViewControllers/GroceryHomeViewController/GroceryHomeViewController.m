@@ -33,7 +33,7 @@
     self.db = [FIRFirestore firestore];
 
     [self setUpGrcoryList];
-    
+
     groceryCollectionView.delegate = self;
     groceryCollectionView.dataSource = self;
     
@@ -209,9 +209,16 @@
 }
 
 - (IBAction)likeEvent:(id)sender withEvent:(UIEvent*)event {
+
     UITouch* touch = [[event allTouches] anyObject];
+    CGPoint currenTouchPosition = [touch locationInView:groceryCollectionView];
+    NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
+    
+    GroceryCollectionViewCell *cell = [groceryCollectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
+
     if (touch.tapCount == 2) {
         NSLog(@"YOU TAPPED TWICE");
+            [cell.favoriteButton setImage:[UIImage imageNamed:@"favorite-16"] forState:UIControlStateNormal];
     }
 }
 

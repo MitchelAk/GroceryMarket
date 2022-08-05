@@ -27,9 +27,11 @@
             NSLog(@"Error getting documents: %@", error);
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
-                groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
+                self->groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
+                
+                self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
+
             }
-            displayGrocery = [[NSMutableArray alloc]initWithArray:groceryArray];
 
         }
     }];
