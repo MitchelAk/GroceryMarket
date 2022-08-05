@@ -218,7 +218,7 @@
 
 //    Grocery *gg = self.groceryList[indexPath];
     
-    NSLog(@"index: %@", indexPath);
+    NSLog(@"index: %ld", (long)indexPath.row);
     
 }
 
