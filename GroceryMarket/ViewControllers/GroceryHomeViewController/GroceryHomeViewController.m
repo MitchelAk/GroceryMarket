@@ -216,9 +216,9 @@
     NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
     
 
-//    Grocery *gg = self.groceryList[indexPath];
+    Grocery *gg = self.groceryList[indexPath.row];
     
-    NSLog(@"index: %ld", (long)indexPath.row);
+    NSLog(@"index: %@", gg.title);
     
 }
 
