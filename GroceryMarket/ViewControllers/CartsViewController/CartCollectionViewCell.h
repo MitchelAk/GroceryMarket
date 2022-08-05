@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CartCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *groceryImage;
+@property (weak, nonatomic) IBOutlet UILabel *groceryName;
+@property (weak, nonatomic) IBOutlet UILabel *groceryPrice;
 
 @end
 

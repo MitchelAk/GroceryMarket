@@ -73,7 +73,12 @@
             </view>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="268" height="241"/>
-            <point key="canvasLocation" x="231.8840579710145" y="221.98660714285714"/>
+            <connections>
+                <outlet property="groceryImage" destination="ajD-ox-Cmv" id="2Gf-S4-tQi"/>
+                <outlet property="groceryName" destination="um1-QD-fmJ" id="QX7-kx-9mD"/>
+                <outlet property="groceryPrice" destination="SWd-e1-F5u" id="2Fn-TA-WqW"/>
+            </connections>
+            <point key="canvasLocation" x="23" y="213"/>
         </collectionViewCell>
     </objects>
     <resources>
