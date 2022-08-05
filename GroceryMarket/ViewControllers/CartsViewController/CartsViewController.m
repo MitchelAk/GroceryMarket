@@ -49,12 +49,12 @@
 
     
     [[[[self.db collectionWithPath:@"users"] documentWithPath:uid] collectionWithPath:@"mycart"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
-            NSLog(@"Fetching docs");
+            NSLog(@"Fetching cart docs");
             if (error != nil) {
                 NSLog(@"Error getting documents: %@", error);
             }else{
                 for (FIRDocumentSnapshot *document in snapshot.documents){
-    //                NSLog(@"%@ => %@", document.documentID, document.data);
+                    NSLog(@"%@ => %@", document.documentID, document.data);
                     Grocery *grocery1 = Grocery.new;
                     grocery1.title = document.data[@"pname"];
                     grocery1.price = document.data[@"price"];

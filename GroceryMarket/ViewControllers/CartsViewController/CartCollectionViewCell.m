@@ -7,6 +7,11 @@
 
 #import "CartCollectionViewCell.h"
 
+@interface CartCollectionViewCell()
+
+@end
+
+
 @implementation CartCollectionViewCell
 
 - (void)awakeFromNib {
