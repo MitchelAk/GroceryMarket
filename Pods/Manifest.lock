@@ -694,6 +694,11 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMaps (7.0.0):
+    - GoogleMaps/Maps (= 7.0.0)
+  - GoogleMaps/Base (7.0.0)
+  - GoogleMaps/Maps (7.0.0):
+    - GoogleMaps/Base
   - GoogleUtilities/AppDelegateSwizzler (7.7.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -818,6 +823,7 @@ DEPENDENCIES:
   - Firebase/CoreOnly
   - Firebase/Firestore
   - FloatingTabBarController
+  - GoogleMaps
   - "MaterialComponents/TextControls+FilledTextAreas"
 
 SPEC REPOS:
@@ -837,6 +843,7 @@ SPEC REPOS:
     - FloatingTabBarController
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleMaps
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
@@ -864,6 +871,7 @@ SPEC CHECKSUMS:
   FloatingTabBarController: 2e5aeb6a5e28cd907c10f172437e48788a214f31
   GoogleAppMeasurement: b907bdad775b6975a8108762345b2cfbf1a93c37
   GoogleDataTransport: 1c8145da7117bd68bbbed00cf304edb6a24de00f
+  GoogleMaps: 6e9c923ca035989709fcb5771544fda4cc5fa2a4
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
@@ -875,6 +883,6 @@ SPEC CHECKSUMS:
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 02bb6868b7dfb2d241d143403a5ab8b4911a51a4
+PODFILE CHECKSUM: f74aac58bd21b47d4202c128c9c5abeb7bda36dd
 
 COCOAPODS: 1.11.3
