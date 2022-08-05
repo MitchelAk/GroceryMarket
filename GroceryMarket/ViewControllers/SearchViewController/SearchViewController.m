@@ -32,7 +32,7 @@
                 groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
                 
                 
-                displayGrocery = [[NSMutableArray alloc]initWithArray:document.data[@"pname"]];
+                displayGrocery = [[NSMutableArray alloc]initWithArray:groceryArray];
 
             }
 
