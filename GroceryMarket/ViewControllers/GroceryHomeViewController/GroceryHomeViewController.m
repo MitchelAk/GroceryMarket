@@ -203,8 +203,18 @@
 
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
+    [[cell favoriteButton] addTarget:self action:@selector(likeEvent:withEvent:) forControlEvents:UIControlEventTouchDownRepeat];
+    
     return cell;
 }
+
+- (IBAction)likeEvent:(id)sender withEvent:(UIEvent*)event {
+    UITouch* touch = [[event allTouches] anyObject];
+    if (touch.tapCount == 2) {
+        NSLog(@"YOU TAPPED TWICE");
+    }
+}
+
 - (IBAction)clickEvent:(id)sender event:(id)event{
     NSSet *touches = [event allTouches];
     

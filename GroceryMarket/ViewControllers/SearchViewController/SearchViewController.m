@@ -6,8 +6,12 @@
 //
 
 #import "SearchViewController.h"
+@import FirebaseCore;
+@import FirebaseFirestore;
 
 @interface SearchViewController ()
+@property (readwrite, nonatomic) FIRFirestore *db;
+
 
 @end
 
@@ -15,9 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    groceryArray = [[NSArray alloc] initWithObjects:@"Gatorade Frost Thirst Quencher Sports Drink", @"Great Value White Eggs", @"Kellogg's Frosted Flakes Breakfast Cereal", @"Sweet Onions", @"Great Value Whole Vitamin D Milk", @"GGreat Value Broccoli Florets", @"Nature's Own Honey Wheat",  @"Stir Fry Frozen Vegetables",  @"Chopped Spinach", @"Congo Green Plantain", @"Vegetable Oil", @"Essentia Bottled Water", @"Fresh Strawberries", @"Gala Apples", @"Fresh Green Bell Pepper", @"Jasmine Rice", @"Great Value Fettuccine", @"Pineapple",  @"Free Chicken Nuggets", @"Beans Canned Vegetables",  nil];
     
-    displayGrocery = [[NSMutableArray alloc]initWithArray:groceryArray];
+    self.db = [FIRFirestore firestore];
+    
+    [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
+        if (error != nil) {
+            NSLog(@"Error getting documents: %@", error);
+        }else{
+            for (FIRDocumentSnapshot *document in snapshot.documents){
+                groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
+            }
+            displayGrocery = [[NSMutableArray alloc]initWithArray:groceryArray];
+
+        }
+    }];
+
+//    groceryArray = [[NSArray alloc] initWithObjects:@"Gatorade Frost Thirst Quencher Sports Drink", @"Great Value White Eggs", @"Kellogg's Frosted Flakes Breakfast Cereal", @"Sweet Onions", @"Great Value Whole Vitamin D Milk", @"GGreat Value Broccoli Florets", @"Nature's Own Honey Wheat",  @"Stir Fry Frozen Vegetables",  @"Chopped Spinach", @"Congo Green Plantain", @"Vegetable Oil", @"Essentia Bottled Water", @"Fresh Strawberries", @"Gala Apples", @"Fresh Green Bell Pepper", @"Jasmine Rice", @"Great Value Fettuccine", @"Pineapple",  @"Free Chicken Nuggets", @"Beans Canned Vegetables",  nil];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
