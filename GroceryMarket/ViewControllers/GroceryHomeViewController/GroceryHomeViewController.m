@@ -200,12 +200,20 @@
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     cell.cartButton.tag = indexPath.row;
-    [[cell cartButton] addTarget:self action:@selector(clickEvent) forControlEvents: UIControlEventTouchUpInside];
+    [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
     return cell;
 }
-- (IBAction)clickEvent:(UIButton *)sender {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:sender.tag inSection: 0];
+- (IBAction)clickEvent:(id)sender event:(id)event{
+    NSSet *touches = [event allTouches];
+    
+    UITouch *touch = [touches anyObject];
+    
+    CGPoint currenTouchPosition = [touch locationInView:groceryCollectionView];
+    
+    NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
+    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rindex inSection: 0];
     NSLog(@"index: %@", indexPath);
     
 }
