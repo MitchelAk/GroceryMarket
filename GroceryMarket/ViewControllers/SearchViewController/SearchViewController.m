@@ -32,14 +32,16 @@
 
                 self->groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
                 
+                self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
+
+                
             }
-            [self->displayGrocery addObjectsFromArray:groceryArray];
+            [self->displayGrocery addObjectsFromArray:self->groceryArray];
         }
     }];
 
 //    groceryArray = [[NSArray alloc] initWithObjects:@"Gatorade Frost Thirst Quencher Sports Drink", @"Great Value White Eggs", @"Kellogg's Frosted Flakes Breakfast Cereal", @"Sweet Onions", @"Great Value Whole Vitamin D Milk", @"GGreat Value Broccoli Florets", @"Nature's Own Honey Wheat",  @"Stir Fry Frozen Vegetables",  @"Chopped Spinach", @"Congo Green Plantain", @"Vegetable Oil", @"Essentia Bottled Water", @"Fresh Strawberries", @"Gala Apples", @"Fresh Green Bell Pepper", @"Jasmine Rice", @"Great Value Fettuccine", @"Pineapple",  @"Free Chicken Nuggets", @"Beans Canned Vegetables",  nil];
     
-//    displayGrocery = [[NSMutableArray alloc]initWithArray:groceryArray];
 
     
 }
