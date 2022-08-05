@@ -33,7 +33,7 @@
 
     self.db = [FIRFirestore firestore];
 
-    [self setUpGrcoryList];
+    [self setUpCartList];
 
     cartCollectionView.delegate = self;
     cartCollectionView.dataSource = self;
@@ -42,8 +42,9 @@
 
 }
 
--(void) setUpGrcoryList {
+-(void) setUpCartList {
     self.cartList = NSMutableArray.new;
+    
     FIRUser *user = [FIRAuth auth].currentUser;
     NSString *uid = user.uid;
 
@@ -60,11 +61,19 @@
                     grocery1.price = document.data[@"price"];
                     grocery1.imageUrl = @"image1";
                     
-                    [self.cartList addObject:grocery1];
+//                    [self.cartList addObject:grocery1];
                 }
-                cartCollectionView.reloadData;
+//                cartCollectionView.reloadData;
             }
     }];
+    
+    Grocery *grocery1 = Grocery.new;
+        grocery1.title = @"Gatorade Frost Thirst Quencher Sports Drink";
+        grocery1.price = @"$6.98";
+    grocery1.imageUrl = @"image1";
+
+    [self.cartList addObject:grocery1];
+
 
 }
 
