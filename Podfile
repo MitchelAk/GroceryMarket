@@ -7,12 +7,14 @@ target 'GroceryMarket' do
 
   # Pods for GroceryMarket
     pod 'Canvas'
+    pod 'MaterialComponents/TextControls+FilledTextAreas'
     pod 'Firebase/Auth'
     pod 'Firebase/Core'
     pod 'Firebase/CoreOnly'
-    pod 'Firebase/Firestore' :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '8.6.0'
+    pod 'Firebase/Firestore' 
   # pod 'GoogleMaps'
     pod 'FloatingTabBarController'
+   
     
 
 end
