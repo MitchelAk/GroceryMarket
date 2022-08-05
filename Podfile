@@ -12,7 +12,7 @@ target 'GroceryMarket' do
     pod 'Firebase/Core'
     pod 'Firebase/CoreOnly'
     pod 'Firebase/Firestore' 
-  # pod 'GoogleMaps'
+    pod 'GoogleMaps'
     pod 'FloatingTabBarController'
    
     
