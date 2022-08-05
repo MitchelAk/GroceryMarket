@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CartsViewController : UIViewController
+@interface CartsViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @end
 
