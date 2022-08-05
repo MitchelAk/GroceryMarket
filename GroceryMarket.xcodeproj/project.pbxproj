@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5450F279289CBB590088F631 /* CartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5450F277289CBB590088F631 /* CartCollectionViewCell.m */; };
+		5450F27A289CBB590088F631 /* CartCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450F278289CBB590088F631 /* CartCollectionViewCell.xib */; };
 		5457D28928906AC6002FE786 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457D28828906AC6002FE786 /* Animation.swift */; };
 		548E24172885D6D500596A7F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E24152885D6D500596A7F /* ProfileViewController.m */; };
 		548E24182885D6D500596A7F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548E24162885D6D500596A7F /* ProfileViewController.xib */; };
@@ -44,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.debug.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.debug.xcconfig"; sourceTree = "<group>"; };
+		5450F276289CBB590088F631 /* CartCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartCollectionViewCell.h; sourceTree = "<group>"; };
+		5450F277289CBB590088F631 /* CartCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartCollectionViewCell.m; sourceTree = "<group>"; };
+		5450F278289CBB590088F631 /* CartCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCollectionViewCell.xib; sourceTree = "<group>"; };
 		5457D28728906AC6002FE786 /* GroceryMarket-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryMarket-Bridging-Header.h"; sourceTree = "<group>"; };
 		5457D28828906AC6002FE786 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		548E24142885D6D500596A7F /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -199,6 +204,9 @@
 				BE0DC0572883762B00B2256F /* CartsViewController.h */,
 				BE0DC0582883762B00B2256F /* CartsViewController.m */,
 				BE0DC0592883762B00B2256F /* CartsViewController.xib */,
+				5450F276289CBB590088F631 /* CartCollectionViewCell.h */,
+				5450F277289CBB590088F631 /* CartCollectionViewCell.m */,
+				5450F278289CBB590088F631 /* CartCollectionViewCell.xib */,
 			);
 			path = CartsViewController;
 			sourceTree = "<group>";
@@ -353,7 +361,6 @@
 		54FDBC50287CB10D00481281 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					54FDBC57287CB10D00481281 = {
@@ -391,6 +398,7 @@
 				BE427E25287CD70A001A1E00 /* GoogleService-Info.plist in Resources */,
 				D39B9B30289AB510001038F0 /* Assets.xcassets in Resources */,
 				BE427E62287F7A05001A1E00 /* GroceryCollectionViewCell.xib in Resources */,
+				5450F27A289CBB590088F631 /* CartCollectionViewCell.xib in Resources */,
 				548E24182885D6D500596A7F /* ProfileViewController.xib in Resources */,
 				BE427E3B287CD732001A1E00 /* SignInViewController.xib in Resources */,
 				BE427E57287EB1EF001A1E00 /* GroceryHomeViewController.xib in Resources */,
@@ -463,6 +471,7 @@
 				BE427E3A287CD732001A1E00 /* SignInViewController.m in Sources */,
 				BE427E50287E9AD0001A1E00 /* SearchViewController.m in Sources */,
 				BE0DC05F288393B200B2256F /* Grocery.m in Sources */,
+				5450F279289CBB590088F631 /* CartCollectionViewCell.m in Sources */,
 				BE427E56287EB1EF001A1E00 /* GroceryHomeViewController.m in Sources */,
 				54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */,
 				BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */,
