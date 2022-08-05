@@ -32,7 +32,7 @@
 
                 self->groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
                 
-                [self->displayGrocery addObject:self->groceryArray];
+                [self->displayGrocery addObjectsFromArray:self->groceryArray];
 
                 
             }
