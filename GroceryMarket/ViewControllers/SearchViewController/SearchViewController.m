@@ -6,8 +6,6 @@
 //
 
 #import "SearchViewController.h"
-#import "Grocery.h"
-
 @import FirebaseCore;
 @import FirebaseFirestore;
 
@@ -31,13 +29,8 @@
         }else{
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"Search Products: %@", document.data[@"pname"]);
-                
-                Grocery *gg = Grocery.new;
-                gg.title = document.data[@"pname"];
-                
-                [self->groceryArray initWithObjects:gg, nil];
 
-//                self->groceryArray = [[NSArray alloc] initWithObjects: gg, nil];
+                [self->groceryArray initWithObjects:document.data[@"pname"], nil];
                 
             }
             [self->displayGrocery addObjectsFromArray:self->groceryArray];
