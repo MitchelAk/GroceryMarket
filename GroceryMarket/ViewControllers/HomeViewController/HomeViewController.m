@@ -7,7 +7,7 @@
 
 #import "HomeViewController.h"
 #import "SearchViewController.h"
-#import "CartsViewController.h"
+#import "CartViewController.h"
 #import "GroceryHomeViewController.h"
 #import "ProfileViewController.h"
 #import "MapViewController.h"
@@ -25,7 +25,7 @@
     [super viewWillAppear:animated];
     ProfileViewController *profileVC = [[ProfileViewController alloc] init];
     SearchViewController *searchVC = [[SearchViewController alloc] init];
-    CartsViewController *cartsVC = [[CartsViewController alloc] init];
+    CartViewController *cartsVC = [[CartViewController alloc] init];
     GroceryHomeViewController *groceryHomeVC = [[GroceryHomeViewController alloc] init];
     MapViewController *mapVC = [[MapViewController alloc] init];
     
@@ -48,7 +48,7 @@
     
     
     
-    [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, cartsVC, mapVC, profileVC, nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, mapVC, profileVC, nil]];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
