@@ -27,8 +27,8 @@ id sproduct;
     double latitude = [latstring doubleValue];
     double longitude = [longstring doubleValue];
 
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:latitude
-                                                              longitude:longitude
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:47.608013
+                                                              longitude:-122.335167
                                                                    zoom:6];
       GMSMapView *mapView = [GMSMapView mapWithFrame:self.view.frame camera:camera];
       mapView.myLocationEnabled = YES;
@@ -36,7 +36,7 @@ id sproduct;
 
 //       Creates a marker in the center of the map.
       GMSMarker *marker = [[GMSMarker alloc] init];
-      marker.position = CLLocationCoordinate2DMake(latitude, longitude);
+      marker.position = CLLocationCoordinate2DMake(47.608013, -122.336167);
       marker.title = mapVC.storename;
       marker.snippet = mapVC.storeLoc;
       marker.map = mapView;
