@@ -78,12 +78,26 @@
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     cell.cartButton.tag = indexPath.row;
+    cell.favoriteButton.tag = indexPath.row;
+    cell.mapButton.tag = indexPath.row;
 
     [[cell cartButton] addTarget:self action:@selector(clickEvent:event:) forControlEvents: UIControlEventTouchUpInside];
     
     [[cell favoriteButton] addTarget:self action:@selector(likeEvent:withEvent:) forControlEvents:UIControlEventTouchDownRepeat];
     
+    [[cell mapButton] addTarget:self action:@selector(mapAction:event:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
+}
+
+- (IBAction)mapAction:(id)sender event:(id)event {
+    UITouch* touch = [[event allTouches] anyObject];
+    CGPoint currenTouchPosition = [touch locationInView:groceryCollectionView];
+    NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
+
+    Grocery *gg = self.groceryList[indexPath.row];
+    NSLog(@"You clicked the map btn for %@", gg.title);
+
 }
 
 - (IBAction)likeEvent:(id)sender withEvent:(UIEvent*)event {
@@ -92,10 +106,12 @@
     CGPoint currenTouchPosition = [touch locationInView:groceryCollectionView];
     NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
     
+    Grocery *gg = self.groceryList[indexPath.row];
+
     GroceryCollectionViewCell *cell = [groceryCollectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
 
     if (touch.tapCount == 2) {
-        NSLog(@"YOU TAPPED TWICE");
+        NSLog(@"You tapped twice for %@", gg.title);
             [cell.favoriteButton setImage:[UIImage imageNamed:@"favorite-16"] forState:UIControlStateNormal];
     }
 }
