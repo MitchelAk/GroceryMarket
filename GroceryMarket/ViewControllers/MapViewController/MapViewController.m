@@ -24,6 +24,9 @@ id sproduct;
     NSString *latstring = mapVC.latitude;
     NSString *longstring = mapVC.longitude;
     
+    
+    NSLog(@"%@ & %@",latstring, longstring);
+    
     double latitude = [latstring doubleValue];
     double longitude = [longstring doubleValue];
 
