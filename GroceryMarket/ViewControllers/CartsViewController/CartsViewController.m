@@ -77,7 +77,7 @@
     NSString *combPrice = [NSString stringWithFormat:@"%s%@", "$", grocery.price];
     
     cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
-    cell.groceryName.text = grocery.title;
+    cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     
     return cell;
