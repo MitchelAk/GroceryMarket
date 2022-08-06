@@ -46,7 +46,7 @@
     self.cartList = NSMutableArray.new;
     
     [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
-        NSLog(@"Fetching docs");
+        NSLog(@"Fetching cart docs");
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
@@ -59,7 +59,7 @@
                 
                 [self.cartList addObject:grocery1];
             }
-            cartCollectionView.reloadData;
+            self->cartCollectionView.reloadData;
         }
     }];
 
