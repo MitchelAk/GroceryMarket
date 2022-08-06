@@ -6,7 +6,7 @@
 //
 
 #import "CartsViewController.h"
-#import "CartCollectionViewCell.h"
+#import "CartViewCollectionCell.h"
 #import "Grocery.h"
 
 @import FirebaseCore;
@@ -71,7 +71,7 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CartCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
+    CartViewCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
     
     Grocery *grocery = self.cartList[indexPath.row];
     NSString *combPrice = [NSString stringWithFormat:@"%s%@", "$", grocery.price];
