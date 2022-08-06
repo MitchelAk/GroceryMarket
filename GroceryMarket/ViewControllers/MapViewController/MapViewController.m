@@ -23,13 +23,13 @@ id sproduct;
     NSString *longstring = self.longitude;
     
     
-    NSLog(@"%@ & %@ & %@ & %@",self.latitude, self.longitude, self.storeLoc, self.storename);
+    NSLog(@"lat: %@ & long: %@ & location: %@ & name: %@",self.latitude, self.longitude, self.storeLoc, self.storename);
     
     double latitude = [latstring doubleValue];
     double longitude = [longstring doubleValue];
 
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:47.608013
-                                                              longitude:-122.335167
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:latitude
+                                                              longitude:longitude
                                                                    zoom:6];
       GMSMapView *mapView = [GMSMapView mapWithFrame:self.view.frame camera:camera];
       mapView.myLocationEnabled = YES;
@@ -37,7 +37,7 @@ id sproduct;
 
 //       Creates a marker in the center of the map.
       GMSMarker *marker = [[GMSMarker alloc] init];
-      marker.position = CLLocationCoordinate2DMake(47.608013, -122.336167);
+      marker.position = CLLocationCoordinate2DMake(latitude, longitude);
       marker.title = self.storename;
       marker.snippet = self.storeLoc;
       marker.map = mapView;
