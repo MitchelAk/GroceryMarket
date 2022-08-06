@@ -13,7 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) NSString *title;
 @property(nonatomic,strong) NSString * price;
 @property(nonatomic,strong) NSString *imageUrl;
-@property(nonatomic,strong) NSString *id;
+@property(nonatomic,strong) NSString *storename;
+@property(nonatomic,strong) NSString *storeLoc;
+@property(nonatomic,strong) NSString *longitude;
+@property(nonatomic,strong) NSString *latitude;
+@property(nonatomic,strong) NSString *storeid;
+
 @property (nonatomic) BOOL favorited;
 
 @end
