@@ -57,7 +57,7 @@
                 grocery1.title = document.data[@"pname"];
                 grocery1.price = document.data[@"price"];
                 grocery1.latitude = @"47.655548";
-                grocery1.longitude = @"122.303200";
+                grocery1.longitude = @"-122.303200";
                 grocery1.storename = @"Hey Mall";
                 grocery1.storeid = document.documentID;
                 grocery1.imageUrl = @"image1";
@@ -65,7 +65,7 @@
                                 
                 [self.groceryList addObject:grocery1];
             }
-            groceryCollectionView.reloadData;
+            self->groceryCollectionView.reloadData;
         }
     }];
 

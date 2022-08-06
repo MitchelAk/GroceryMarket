@@ -30,7 +30,7 @@ id sproduct;
 
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:latitude
                                                               longitude:longitude
-                                                                   zoom:6];
+                                                                   zoom:12];
       GMSMapView *mapView = [GMSMapView mapWithFrame:self.view.frame camera:camera];
       mapView.myLocationEnabled = YES;
       [self.view addSubview:mapView];

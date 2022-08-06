@@ -34,7 +34,7 @@
 
 
 - (IBAction)didTapFavorite:(id)sender {
-//    [self.favoriteButton setImage:[UIImage imageNamed:@"favorite-16"] forState:UIControlStateNormal];
+    [self.favoriteButton setImage:[UIImage imageNamed:@"favorite-16"] forState:UIControlStateNormal];
     }
 
 @end
