@@ -29,7 +29,7 @@
       marker.position = CLLocationCoordinate2DMake(47.655548, -122.303200);
       marker.title = @"Seattle";
       marker.snippet = @"WASHINGTON";
-      zmarker.map = mapView;
+      marker.map = mapView;
 }
 
 
