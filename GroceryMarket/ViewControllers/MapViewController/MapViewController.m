@@ -19,13 +19,11 @@ id sproduct;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    MapViewController  *mapVC = [[MapViewController alloc] init];
-
-    NSString *latstring = mapVC.latitude;
-    NSString *longstring = mapVC.longitude;
+    NSString *latstring = self.latitude;
+    NSString *longstring = self.longitude;
     
     
-    NSLog(@"%@ & %@",latstring, longstring);
+    NSLog(@"%@ & %@ & %@ & %@",self.latitude, self.longitude, self.storeLoc, self.storename);
     
     double latitude = [latstring doubleValue];
     double longitude = [longstring doubleValue];
@@ -40,8 +38,8 @@ id sproduct;
 //       Creates a marker in the center of the map.
       GMSMarker *marker = [[GMSMarker alloc] init];
       marker.position = CLLocationCoordinate2DMake(47.608013, -122.336167);
-      marker.title = mapVC.storename;
-      marker.snippet = mapVC.storeLoc;
+      marker.title = self.storename;
+      marker.snippet = self.storeLoc;
       marker.map = mapView;
 }
 
