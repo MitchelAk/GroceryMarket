@@ -48,7 +48,7 @@
     
     
     
-    [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, mapVC, profileVC, nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, cartsVC, mapVC, profileVC, nil]];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
