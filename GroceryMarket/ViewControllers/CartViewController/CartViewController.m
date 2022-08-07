@@ -38,19 +38,17 @@
     cartViewController.delegate = self;
     cartViewController.dataSource = self;
     
-<<<<<<< HEAD
     [cartViewController registerNib:[UINib nibWithNibName:@"CartViewCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
-=======
-    [groceryCollectionView registerNib:[UINib nibWithNibName:@"CartViewCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
->>>>>>> 43e67443c12f6f6278ca99d6b98780481c8ec1db
-
 }
 
 
 -(void) setUpGrcoryList {
     self.groceryList = NSMutableArray.new;
+    FIRUser *user = [FIRAuth auth].currentUser;
+    NSString *uid = user.uid;
+
     
-    [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
+    [[[[self.db collectionWithPath:@"users"] documentWithPath:uid] collectionWithPath:@"myCart"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
         NSLog(@"Fetching docs");
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
