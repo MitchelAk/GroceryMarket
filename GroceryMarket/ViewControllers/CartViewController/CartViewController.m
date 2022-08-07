@@ -48,8 +48,8 @@
     NSString *uid = user.uid;
 
     
-    [[[[self.db collectionWithPath:@"users"] documentWithPath:uid] collectionWithPath:@"myCart"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
-        NSLog(@"Fetching docs");
+    [[[[self.db collectionWithPath:@"users"] documentWithPath:uid] collectionWithPath:@"mycart"] getDocumentsWithCompletion:^(FIRQuerySnapshot *snapshot, NSError *error) {
+        NSLog(@"Fetching cart docs");
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
