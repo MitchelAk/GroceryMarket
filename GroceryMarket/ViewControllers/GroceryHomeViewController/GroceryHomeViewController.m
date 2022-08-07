@@ -23,7 +23,6 @@
 
 @property (readwrite, nonatomic) FIRFirestore *db;
 
-
 @end
 
 @implementation GroceryHomeViewController

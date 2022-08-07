@@ -1,14 +1,17 @@
 //
-//  CartViewCollectionCell.m
+//  GroceryCollectionViewCell.m
 //  GroceryMarket
 //
-//  Created by Mitchel Igolimah on 8/6/22.
 //
 
 #import "CartViewCollectionCell.h"
+//@import FirebaseCore;
+//@import FirebaseFirestore;
+
 
 @interface CartViewCollectionCell()
 
+//@property (readwrite, nonatomic) FIRFirestore *db;
 
 @end
 
@@ -16,9 +19,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
     self.layer.cornerRadius = 20;
-
 }
 
 @end

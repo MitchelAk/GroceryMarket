@@ -38,7 +38,7 @@
     groceryCollectionView.delegate = self;
     groceryCollectionView.dataSource = self;
     
-    [groceryCollectionView registerNib:[UINib nibWithNibName:@"GroceryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
+    [groceryCollectionView registerNib:[UINib nibWithNibName:@"CartViewCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
 
 }
 
