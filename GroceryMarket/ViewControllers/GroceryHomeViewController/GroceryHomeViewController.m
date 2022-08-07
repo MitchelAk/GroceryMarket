@@ -55,12 +55,12 @@
                 Grocery *grocery1 = Grocery.new;
                 grocery1.title = document.data[@"pname"];
                 grocery1.price = document.data[@"price"];
-                grocery1.latitude = @"47.655548";
-                grocery1.longitude = @"-122.303200";
-                grocery1.storename = @"Hey Mall";
+                grocery1.latitude = document.data[@"latitude"];
+                grocery1.longitude = document.data[@"longitude"];
+                grocery1.storename = document.data[@"storename"];
                 grocery1.storeid = document.documentID;
                 grocery1.imageUrl = @"image1";
-                grocery1.storeLoc = @"Miami";
+                grocery1.storeLoc = document.data[@"storeloc"];
                                 
                 [self.groceryList addObject:grocery1];
             }
