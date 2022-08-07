@@ -10,7 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CartViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
-
 @end
 
 NS_ASSUME_NONNULL_END

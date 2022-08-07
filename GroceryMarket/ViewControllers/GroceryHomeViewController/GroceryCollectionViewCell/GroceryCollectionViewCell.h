@@ -9,6 +9,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GroceryCollectionViewCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *groceryImage;
 @property (weak, nonatomic) IBOutlet UILabel *groceryPrice;
 @property (weak, nonatomic) IBOutlet UILabel *groceryTitle;

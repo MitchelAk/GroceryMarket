@@ -17,7 +17,7 @@
 @interface CartViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
     
     
-    __weak IBOutlet UICollectionView *groceryCollectionView;
+    __weak IBOutlet UICollectionView *cartViewController;
 }
 @property (nonatomic, strong) NSMutableArray<Grocery *> *groceryList;
 
@@ -35,10 +35,14 @@
 
     [self setUpGrcoryList];
 
-    groceryCollectionView.delegate = self;
-    groceryCollectionView.dataSource = self;
+    cartViewController.delegate = self;
+    cartViewController.dataSource = self;
     
-    [groceryCollectionView registerNib:[UINib nibWithNibName:@"GroceryCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
+<<<<<<< HEAD
+    [cartViewController registerNib:[UINib nibWithNibName:@"CartViewCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
+=======
+    [groceryCollectionView registerNib:[UINib nibWithNibName:@"CartViewCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cellID"];
+>>>>>>> 43e67443c12f6f6278ca99d6b98780481c8ec1db
 
 }
 
@@ -65,7 +69,7 @@
                                 
                 [self.groceryList addObject:grocery1];
             }
-            self->groceryCollectionView.reloadData;
+            self->cartViewController.reloadData;
         }
     }];
 
@@ -92,8 +96,8 @@
 
 - (IBAction)mapAction:(id)sender event:(id)event {
     UITouch* touch = [[event allTouches] anyObject];
-    CGPoint currenTouchPosition = [touch locationInView:groceryCollectionView];
-    NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
+    CGPoint currenTouchPosition = [touch locationInView:cartViewController];
+    NSIndexPath *indexPath = [cartViewController indexPathForItemAtPoint:currenTouchPosition];
 
     Grocery *gg = self.groceryList[indexPath.row];
     NSLog(@"You clicked the map btn for %@", gg.title);
@@ -112,9 +116,9 @@
     
     UITouch *touch = [touches anyObject];
     
-    CGPoint currenTouchPosition = [touch locationInView:groceryCollectionView];
+    CGPoint currenTouchPosition = [touch locationInView:cartViewController];
     
-    NSIndexPath *indexPath = [groceryCollectionView indexPathForItemAtPoint:currenTouchPosition];
+    NSIndexPath *indexPath = [cartViewController indexPathForItemAtPoint:currenTouchPosition];
     
 
     Grocery *gg = self.groceryList[indexPath.row];
