@@ -16,6 +16,9 @@
 @end
 
 @implementation SearchViewController
+- (IBAction)didTap:(id)sender {
+    [self.view endEditing:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -39,6 +40,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="Sf4-R9-kXW"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="Sf4-R9-kXW" firstAttribute="trailing" secondItem="ja2-7S-9KA" secondAttribute="trailing" id="2Bt-Kl-DJj"/>
                 <constraint firstItem="ja2-7S-9KA" firstAttribute="top" secondItem="Sf4-R9-kXW" secondAttribute="top" id="4mc-gX-u3I"/>
@@ -47,8 +49,16 @@
                 <constraint firstItem="ja2-7S-9KA" firstAttribute="leading" secondItem="Sf4-R9-kXW" secondAttribute="leading" id="wyP-nI-9lc"/>
                 <constraint firstAttribute="bottom" secondItem="ja2-7S-9KA" secondAttribute="bottom" id="xh3-Qt-oPw"/>
             </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="WUc-tt-UJT" appends="YES" id="rW8-30-xbn"/>
+            </connections>
             <point key="canvasLocation" x="31.884057971014496" y="182.8125"/>
         </view>
+        <tapGestureRecognizer id="WUc-tt-UJT">
+            <connections>
+                <action selector="didTap:" destination="-1" id="yN9-8X-Mk4"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">

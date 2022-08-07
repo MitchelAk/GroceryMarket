@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5450F285289F25240088F631 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5450F283289F25240088F631 /* CartViewController.m */; };
-		5450F286289F25240088F631 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450F284289F25240088F631 /* CartViewController.xib */; };
 		5450F28B289F26610088F631 /* CartViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5450F289289F26610088F631 /* CartViewCollectionCell.m */; };
 		5450F28C289F26610088F631 /* CartViewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450F28A289F26610088F631 /* CartViewCollectionCell.xib */; };
+		5450F29A28A036580088F631 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5450F29828A036580088F631 /* CartViewController.m */; };
+		5450F29B28A036580088F631 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450F29928A036580088F631 /* CartViewController.xib */; };
 		5457D28928906AC6002FE786 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457D28828906AC6002FE786 /* Animation.swift */; };
 		548E24172885D6D500596A7F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E24152885D6D500596A7F /* ProfileViewController.m */; };
 		548E24182885D6D500596A7F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548E24162885D6D500596A7F /* ProfileViewController.xib */; };
@@ -46,12 +46,12 @@
 
 /* Begin PBXFileReference section */
 		2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.debug.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.debug.xcconfig"; sourceTree = "<group>"; };
-		5450F282289F25240088F631 /* CartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
-		5450F283289F25240088F631 /* CartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
-		5450F284289F25240088F631 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		5450F288289F26610088F631 /* CartViewCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartViewCollectionCell.h; sourceTree = "<group>"; };
 		5450F289289F26610088F631 /* CartViewCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartViewCollectionCell.m; sourceTree = "<group>"; };
 		5450F28A289F26610088F631 /* CartViewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewCollectionCell.xib; sourceTree = "<group>"; };
+		5450F29728A036580088F631 /* CartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		5450F29828A036580088F631 /* CartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		5450F29928A036580088F631 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		5457D28728906AC6002FE786 /* GroceryMarket-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GroceryMarket-Bridging-Header.h"; sourceTree = "<group>"; };
 		5457D28828906AC6002FE786 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		548E24142885D6D500596A7F /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -120,9 +120,9 @@
 		5450F281289F24EC0088F631 /* CartViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5450F282289F25240088F631 /* CartViewController.h */,
-				5450F283289F25240088F631 /* CartViewController.m */,
-				5450F284289F25240088F631 /* CartViewController.xib */,
+				5450F29728A036580088F631 /* CartViewController.h */,
+				5450F29828A036580088F631 /* CartViewController.m */,
+				5450F29928A036580088F631 /* CartViewController.xib */,
 				5450F287289F25D20088F631 /* CartViewCollectionCell */,
 			);
 			path = CartViewController;
@@ -413,8 +413,8 @@
 				54FDBC66287CB10D00481281 /* Main.storyboard in Resources */,
 				54C60907288F60FB0013E0F1 /* MapViewController.xib in Resources */,
 				548E241E2888717C00596A7F /* BottomSheetViewController.xib in Resources */,
-				5450F286289F25240088F631 /* CartViewController.xib in Resources */,
 				5450F28C289F26610088F631 /* CartViewCollectionCell.xib in Resources */,
+				5450F29B28A036580088F631 /* CartViewController.xib in Resources */,
 				BE427E3F287CD732001A1E00 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +488,7 @@
 				BE427E38287CD732001A1E00 /* RegisterViewController.m in Sources */,
 				BE427E3C287CD732001A1E00 /* LandingViewController.m in Sources */,
 				54FDBC63287CB10D00481281 /* ViewController.m in Sources */,
+				5450F29A28A036580088F631 /* CartViewController.m in Sources */,
 				548E241D2888717C00596A7F /* BottomSheetViewController.m in Sources */,
 				54FDBC5D287CB10D00481281 /* AppDelegate.m in Sources */,
 				548E24172885D6D500596A7F /* ProfileViewController.m in Sources */,
@@ -502,7 +503,6 @@
 				54FDBC60287CB10D00481281 /* SceneDelegate.m in Sources */,
 				BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */,
 				54C60906288F60FB0013E0F1 /* MapViewController.m in Sources */,
-				5450F285289F25240088F631 /* CartViewController.m in Sources */,
 				5457D28928906AC6002FE786 /* Animation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
