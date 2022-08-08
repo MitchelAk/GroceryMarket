@@ -62,7 +62,7 @@
                 grocery1.longitude = document.data[@"longitude"];
                 grocery1.storename = document.data[@"storename"];
                 grocery1.storeid = document.documentID;
-                grocery1.imageUrl = @"image1";
+                grocery1.imageUrl = document.data[@"image"];
                 grocery1.storeLoc = document.data[@"storeloc"];
                                 
                 [self.groceryList addObject:grocery1];
@@ -130,7 +130,12 @@
       addDocumentWithData:@{
         @"pname":gg.title,
         @"price":gg.price,
-        @"image":gg.imageUrl
+        @"image":gg.imageUrl,
+        @"storename":gg.storename,
+        @"storeloc":gg.storeLoc,
+        @"latitude":gg.latitude,
+        @"logitude":gg.longitude,
+
       } completion:^(NSError *  _Nullable error){
         if(error != nil){
             NSLog(@"Error adding document: %@", [error localizedDescription]);

@@ -59,7 +59,7 @@
                 grocery1.longitude = document.data[@"longitude"];
                 grocery1.storename = document.data[@"storename"];
                 grocery1.storeid = document.documentID;
-                grocery1.imageUrl = @"image1";
+                grocery1.imageUrl = document.data[@"image"];
                 grocery1.storeLoc = document.data[@"storeloc"];
                                 
                 [self.groceryList addObject:grocery1];
@@ -78,8 +78,11 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GroceryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
     Grocery *grocery = self.groceryList[indexPath.row];
+    
     NSString *combPrice = [NSString stringWithFormat:@"%s%@", "$", grocery.price];
-    cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
+    NSURL *imageurl = [NSURL URLWithString:grocery.imageUrl];
+    
+    cell.groceryImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     cell.cartButton.tag = indexPath.row;
@@ -149,7 +152,12 @@
       addDocumentWithData:@{
         @"pname":gg.title,
         @"price":gg.price,
-        @"image":gg.imageUrl
+        @"image":gg.imageUrl,
+        @"longitude":gg.longitude,
+        @"latitude":gg.latitude,
+        @"storeloc":gg.storeLoc,
+        @"storename":gg.storename,
+
       } completion:^(NSError *  _Nullable error){
         if(error != nil){
             NSLog(@"Error adding document: %@", [error localizedDescription]);
