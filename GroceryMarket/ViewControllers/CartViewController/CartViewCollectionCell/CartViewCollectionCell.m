@@ -5,13 +5,11 @@
 //
 
 #import "CartViewCollectionCell.h"
-//@import FirebaseCore;
-//@import FirebaseFirestore;
 
 
 @interface CartViewCollectionCell()
 
-//@property (readwrite, nonatomic) FIRFirestore *db;
+
 
 @end
 
