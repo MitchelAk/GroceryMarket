@@ -27,13 +27,13 @@
     SearchViewController *searchVC = [[SearchViewController alloc] init];
     CartViewController *cartsVC = [[CartViewController alloc] init];
     GroceryHomeViewController *groceryHomeVC = [[GroceryHomeViewController alloc] init];
-    MapViewController *mapVC = [[MapViewController alloc] init];
+    
     
     [searchVC.tabBarItem setTitle:@"Search"];
     [cartsVC.tabBarItem setTitle:@"Cart"];
     [groceryHomeVC.tabBarItem setTitle:@"Home"];
     [profileVC.tabBarItem setTitle:@"Account"];
-    [mapVC.tabBarItem setTitle:@"Map"];
+  
     
     self.tabFormat = [[TabBarFormat alloc] init];
     [self.tabFormat ChangeRadiusOfTabBarItem:self.tabBar];
@@ -44,11 +44,10 @@
     cartsVC.tabBarItem.image = [UIImage imageNamed:@"cart.png"];
     groceryHomeVC.tabBarItem.image = [UIImage imageNamed:@"home.png"];
     profileVC.tabBarItem.image = [UIImage imageNamed:@"user-16.png"];
-    mapVC.tabBarItem.image = [UIImage imageNamed:@"map.png"];
+   
     
     
-    
-    [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, cartsVC, mapVC, profileVC, nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:groceryHomeVC, searchVC, cartsVC,  profileVC, nil]];
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
