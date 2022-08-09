@@ -36,11 +36,11 @@
                 
                 
                 self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
-                
-                [self->displayGrocery addObject:self->groceryArray];
-    
 
             }
+            
+            [self->displayGrocery addObject:self->groceryArray];
+
 
         }
     }];
