@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
     IBOutlet UITableView * tableView;
     IBOutlet UISearchBar * searchBar;
     
-    NSArray * groceryArray;
+    NSMutableArray * groceryArray;
     NSMutableArray * displayGrocery;
 }
 

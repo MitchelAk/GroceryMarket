@@ -29,16 +29,17 @@
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
-            self->groceryArray = [[NSArray alloc] initWithObjects:@"Feed", nil];
+            [self->groceryArray initWithObjects:@"Feed", nil];
+            
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"Search Products: %@", document.data[@"pname"]);
 
-                self->groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
+                [self->groceryArray addObject:document.data[@"pname"]];
                 
 
             }
             
-            self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
+            [self->displayGrocery initWithArray:self->groceryArray];
 
             
             [self->tableView reloadData];
