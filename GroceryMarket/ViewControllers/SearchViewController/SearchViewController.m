@@ -32,7 +32,7 @@
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"Search Products: %@", document.data[@"pname"]);
 
-                self->groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
+                self->groceryArray = [[NSArray alloc] initWithArray:document.data[@"pname"]];
                 
                 
                 self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
