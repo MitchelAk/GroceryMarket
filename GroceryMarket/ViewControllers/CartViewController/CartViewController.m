@@ -82,7 +82,10 @@
     CartViewCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
     Grocery *grocery = self.groceryList[indexPath.row];
     NSString *combPrice = [NSString stringWithFormat:@"%s%@", "$", grocery.price];
-    cell.groceryImage.image = [UIImage imageNamed:grocery.imageUrl];
+
+    NSURL *imageurl = [NSURL URLWithString:grocery.imageUrl];
+    
+    cell.groceryImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     cell.mapButton.tag = indexPath.row;
