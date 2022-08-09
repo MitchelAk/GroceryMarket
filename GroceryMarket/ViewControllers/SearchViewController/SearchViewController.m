@@ -38,6 +38,8 @@
                 self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
 
             }
+            
+            tableView.reloadData;
 
         }
     }];
