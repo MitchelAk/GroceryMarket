@@ -29,7 +29,7 @@
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
-            [self->groceryArray initWithObjects:@"Feed", nil];
+            self->groceryArray = [[NSMutableArray alloc] initWithObjects:@"Feed", nil];
             
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"Search Products: %@", document.data[@"pname"]);
@@ -39,7 +39,7 @@
 
             }
             
-            [self->displayGrocery initWithArray:self->groceryArray];
+            self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
 
             
             [self->tableView reloadData];
