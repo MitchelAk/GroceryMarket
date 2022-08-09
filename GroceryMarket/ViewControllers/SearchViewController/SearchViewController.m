@@ -77,22 +77,22 @@
         [displayGrocery removeAllObjects];
         [displayGrocery addObjectsFromArray:groceryArray];
     }else {
-        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(reload:search:) object:nil];
-        [self performSelector:@selector(reload:search:) withObject:nil afterDelay:0.75];
+        [displayGrocery removeAllObjects];
+        for (NSString * string in groceryArray){
+            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if (r.location != NSNotFound){
+                [displayGrocery addObject:string];
+                [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(reload) object:nil];
+                [self performSelector:@selector(reload) withObject:nil afterDelay:0.5];
 
+            }
+        }
+        
     }
-    [tableView reloadData];
 }
 
--(void)reload:(id)sender search:(UISearchBar *)sb{
-    [displayGrocery removeAllObjects];
-    for (NSString * string in groceryArray){
-        NSRange r = [string rangeOfString:sb.text options:NSCaseInsensitiveSearch];
-        if (r.location != NSNotFound){
-            [displayGrocery addObject:string];
-            
-        }
-    }
+-(void)reload{
+    [tableView reloadData];
 
 }
 
