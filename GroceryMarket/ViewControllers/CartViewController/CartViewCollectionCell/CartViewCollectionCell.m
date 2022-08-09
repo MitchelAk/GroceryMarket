@@ -18,6 +18,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.layer.cornerRadius = 20;
+    self.layer.cornerRadius = 20;
+    [self.cancelButton setTitle:@"" forState: UIControlStateNormal];
+    [self.mapButton setTitle:@"" forState: UIControlStateNormal];
+    
 }
 
 @end

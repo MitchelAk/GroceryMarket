@@ -18,55 +18,95 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="259"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-dQ-qOR">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="259"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="EYU-Ks-Wnq">
+                        <rect key="frame" x="20" y="21" width="260" height="217.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bean" translatesAutoresizingMaskIntoConstraints="NO" id="ODT-xS-Rit">
-                                <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                <rect key="frame" x="80" y="0.0" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="kZC-ax-SPg"/>
+                                    <constraint firstAttribute="width" constant="100" id="34A-zr-0jh"/>
                                     <constraint firstAttribute="width" secondItem="ODT-xS-Rit" secondAttribute="height" multiplier="1:1" id="tqE-3X-nNj"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic Bananas" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-Gi-nDY">
-                                <rect key="frame" x="85.5" y="126" width="129.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic Bananas" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vP-Gi-nDY">
+                                <rect key="frame" x="45.5" y="131" width="169" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="mNq-Yh-8hx"/>
+                                    <constraint firstAttribute="width" constant="169" id="zK8-72-6rq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyp-M0-zPV">
-                                <rect key="frame" x="127.5" y="172" width="45" height="31"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="x.circle.fill" catalog="system"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="j9Z-5x-pd6">
-                                <rect key="frame" x="77.5" y="229" width="145" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="o80-ik-wGj">
+                                <rect key="frame" x="0.0" y="182.5" width="260" height="35"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-x6-7HE">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyp-M0-zPV">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="KWA-3F-PNy"/>
+                                            <constraint firstAttribute="height" constant="35" id="wk3-cC-wJo"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="x.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4.99" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-x6-7HE">
+                                        <rect key="frame" x="65" y="0.0" width="130" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="63g-tK-Ysq"/>
+                                            <constraint firstAttribute="height" constant="35" id="Jid-aE-RbG"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1Q-dy-Qqi">
-                                        <rect key="frame" x="105" y="0.0" width="40" height="30"/>
+                                        <rect key="frame" x="225" y="0.0" width="35" height="35"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="GWf-63-klF"/>
+                                            <constraint firstAttribute="width" constant="35" id="hcy-dT-Ama"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="map"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="mappin" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="A3K-kK-ykO"/>
+                                    <constraint firstAttribute="width" constant="260" id="dqS-GR-REh"/>
+                                </constraints>
                             </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="o80-ik-wGj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EYU-Ks-Wnq" secondAttribute="leading" id="OGt-M0-iOm"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="217.5" id="c5Y-nb-uVf"/>
+                            <constraint firstAttribute="width" constant="260" id="dVg-1z-bzH"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="o80-ik-wGj" secondAttribute="trailing" id="zV2-k1-Cll"/>
+                        </constraints>
                     </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fYu-dQ-qOR" secondAttribute="bottom" id="5LR-M6-o0b"/>
-                <constraint firstItem="fYu-dQ-qOR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OIY-vy-pep"/>
-                <constraint firstItem="fYu-dQ-qOR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="P1z-yK-rO0"/>
-                <constraint firstAttribute="trailing" secondItem="fYu-dQ-qOR" secondAttribute="trailing" id="Yum-8B-vOf"/>
+                <constraint firstAttribute="trailing" secondItem="EYU-Ks-Wnq" secondAttribute="trailing" constant="20" id="7oM-HH-OeF"/>
+                <constraint firstItem="EYU-Ks-Wnq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="21" id="BcA-BS-F0G"/>
+                <constraint firstItem="EYU-Ks-Wnq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="LJ9-bP-mr5"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EYU-Ks-Wnq" secondAttribute="bottom" constant="20.5" id="Wyx-t1-ppI"/>
             </constraints>
             <size key="customSize" width="300" height="259"/>
             <connections>
@@ -76,13 +116,16 @@
                 <outlet property="groceryTitle" destination="8vP-Gi-nDY" id="oi8-uf-Nuk"/>
                 <outlet property="mapButton" destination="x1Q-dy-Qqi" id="Rbw-PM-OaM"/>
             </connections>
-            <point key="canvasLocation" x="-71" y="0.0"/>
+            <point key="canvasLocation" x="-71.014492753623188" y="-0.33482142857142855"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="bean" width="612" height="612"/>
-        <image name="map" width="16" height="16"/>
+        <image name="mappin" catalog="system" width="105" height="128"/>
         <image name="x.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
