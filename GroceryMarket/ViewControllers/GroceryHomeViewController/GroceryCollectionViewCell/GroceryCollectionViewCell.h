@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *cartButton;
 @property (weak, nonatomic) IBOutlet UIButton *mapButton;
 
-//@property (weak, nonatomic) IBOutlet UIButton *buttonTap;
 
 @end
 

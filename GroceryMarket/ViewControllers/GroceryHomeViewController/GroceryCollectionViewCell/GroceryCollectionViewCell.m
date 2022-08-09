@@ -5,13 +5,11 @@
 //
 
 #import "GroceryCollectionViewCell.h"
-//@import FirebaseCore;
-//@import FirebaseFirestore;
 
 
 @interface GroceryCollectionViewCell()
 
-//@property (readwrite, nonatomic) FIRFirestore *db;
+
 
 @end
 
@@ -22,14 +20,13 @@
     self.layer.cornerRadius = 20;
     [self.favoriteButton setTitle:@"" forState: UIControlStateNormal];
     [self.cartButton setTitle:@"" forState: UIControlStateNormal];
+    [self.mapButton setTitle:@"" forState: UIControlStateNormal];
     
 }
 
 - (IBAction)buttonTapped:(UIButton *)sender
 {
-//    self.db = [FIRFirestore firestore];
 
-//  NSLog(@"Button Tapped!");
 }
 
 
