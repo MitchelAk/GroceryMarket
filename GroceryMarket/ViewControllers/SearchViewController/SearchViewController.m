@@ -29,10 +29,12 @@
         if (error != nil) {
             NSLog(@"Error getting documents: %@", error);
         }else{
-            self->groceryArray = [[NSMutableArray alloc] initWithObjects:@"Feed", nil];
             
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"Search Products: %@", document.data[@"pname"]);
+                
+                self->groceryArray = [[NSMutableArray alloc] initWithObjects:document.data[@"pname"], nil];
+
 
                 [self->groceryArray addObject:document.data[@"pname"]];
                 
