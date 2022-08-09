@@ -75,21 +75,25 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(reload) object:nil];
     [self performSelector:@selector(reload) withObject:nil afterDelay:0.5];
-    if ([searchText length] == 0){
-        [displayGrocery removeAllObjects];
-        [displayGrocery addObjectsFromArray:groceryArray];
-    }else {
-        [displayGrocery removeAllObjects];
-        for (NSString * string in groceryArray){
-            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            if (r.location != NSNotFound){
-                [displayGrocery addObject:string];
+//    if ([searchText length] == 0){
+//        [displayGrocery removeAllObjects];
+//        [displayGrocery addObjectsFromArray:groceryArray];
+//    }else {
+//        [displayGrocery removeAllObjects];
+//        for (NSString * string in groceryArray){
+//            NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
+//            if (r.location != NSNotFound){
+//                [displayGrocery addObject:string];
                 
-            }
-        }
+//            }
+//        }
         
-    }
-    [tableView reloadData];
+//    }
+//    [tableView reloadData];
+}
+
+-(void)reload{
+    
 }
 
 @end
