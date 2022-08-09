@@ -34,10 +34,10 @@
 
                 self->groceryArray = [[NSArray alloc] initWithObjects:document.data[@"pname"], nil];
                 
-                
-                self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
-
             }
+            
+            [self->displayGrocery addObject:self->groceryArray];
+
             
             [self->displayGrocery addObject:self->groceryArray];
 
