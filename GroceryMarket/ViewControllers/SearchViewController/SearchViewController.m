@@ -36,10 +36,12 @@
                 
                 
                 self->displayGrocery = [[NSMutableArray alloc]initWithArray:self->groceryArray];
+                
+                [tableView reloadData];
 
             }
             
-            tableView.reloadData;
+            [tableView reloadData];
 
         }
     }];
@@ -64,6 +66,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
+    [tableView reloadData ];
     cell.textLabel.text = [displayGrocery objectAtIndex:indexPath.row];
     return cell;
 }
