@@ -71,7 +71,7 @@
     cell.textLabel.text = [displayGrocery objectAtIndex:indexPath.row];
     
     cell.tag = indexPath.row;
-    [atableView targetForAction:@selector(cellClick:) withSender:self];
+    [tableView targetForAction:@selector(cellClick:) withSender:self];
     
     return cell;
 }
