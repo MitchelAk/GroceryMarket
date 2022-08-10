@@ -72,14 +72,21 @@
     
     cell.tag = indexPath.row;
     
+    
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+
     
     NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
 
     NSLog(@"You clicked %@", ff);
+    return cell;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
