@@ -18,6 +18,10 @@
 @end
 
 @implementation ProfileViewController
+- (IBAction)onTap:(id)sender {
+   [self.view endEditing:YES];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +38,7 @@
     NSString *uid = user.uid;
     if (user) {
         
-//        NSString *uid = user.uid;
+        //NSString *uid = user.uid;
         NSLog(@"user id: %@", user.uid);
         [[[self.db collectionWithPath:@"users"] documentWithPath:uid] getDocumentWithCompletion:^(FIRDocumentSnapshot * _Nullable snapshot, NSError * _Nullable error ){
             if (snapshot.exists) {
