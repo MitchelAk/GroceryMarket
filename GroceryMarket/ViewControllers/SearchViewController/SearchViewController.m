@@ -71,18 +71,15 @@
     cell.textLabel.text = [displayGrocery objectAtIndex:indexPath.row];
     
     cell.tag = indexPath.row;
-    
+    [cell targetForAction:@selector(cellClick:) withSender:self];
     
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:( NSIndexPath *)indexPath{
-
-    
-    NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
-
-    NSLog(@"You clicked");
+-(IBAction)cellClick:(id)sender{
+    NSLog(@"You just clicked");
 }
+
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     if ([searchText length] == 0){
