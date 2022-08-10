@@ -118,7 +118,7 @@
     LandingViewController *logout = [[LandingViewController alloc] initWithNibName:@"LandingViewController" bundle:nil];
     [self.navigationController pushViewController:logout animated:YES];
 
-    [[FIRAuth auth] signOut:nil];
+//    [[FIRAuth auth] signOut:nil];
 
 }
 @end
