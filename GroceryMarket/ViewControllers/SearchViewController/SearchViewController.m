@@ -76,17 +76,12 @@
     return cell;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
+- (void)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
 
     
     NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
 
     NSLog(@"You clicked %@", ff);
-    return cell;
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
