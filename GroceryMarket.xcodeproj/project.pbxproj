@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542D13AA28A467A00048491A /* ItemContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542D13A828A467A00048491A /* ItemContentViewController.m */; };
+		542D13AB28A467A00048491A /* ItemContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 542D13A928A467A00048491A /* ItemContentViewController.xib */; };
 		5450F28B289F26610088F631 /* CartViewCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5450F289289F26610088F631 /* CartViewCollectionCell.m */; };
 		5450F28C289F26610088F631 /* CartViewCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5450F28A289F26610088F631 /* CartViewCollectionCell.xib */; };
 		5450F29A28A036580088F631 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5450F29828A036580088F631 /* CartViewController.m */; };
@@ -44,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		2C3E71937DA2718A223EA1AB /* Pods-GroceryMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroceryMarket.debug.xcconfig"; path = "Target Support Files/Pods-GroceryMarket/Pods-GroceryMarket.debug.xcconfig"; sourceTree = "<group>"; };
+		542D13A728A467A00048491A /* ItemContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemContentViewController.h; sourceTree = "<group>"; };
+		542D13A828A467A00048491A /* ItemContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemContentViewController.m; sourceTree = "<group>"; };
+		542D13A928A467A00048491A /* ItemContentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemContentViewController.xib; sourceTree = "<group>"; };
 		5450F288289F26610088F631 /* CartViewCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartViewCollectionCell.h; sourceTree = "<group>"; };
 		5450F289289F26610088F631 /* CartViewCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CartViewCollectionCell.m; sourceTree = "<group>"; };
 		5450F28A289F26610088F631 /* CartViewCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewCollectionCell.xib; sourceTree = "<group>"; };
@@ -112,6 +117,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		542D13A628A466530048491A /* ItemContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				542D13A728A467A00048491A /* ItemContentViewController.h */,
+				542D13A828A467A00048491A /* ItemContentViewController.m */,
+				542D13A928A467A00048491A /* ItemContentViewController.xib */,
+			);
+			path = ItemContentViewController;
+			sourceTree = "<group>";
+		};
 		5450F281289F24EC0088F631 /* CartViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +231,7 @@
 		BE427E26287CD731001A1E00 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				542D13A628A466530048491A /* ItemContentViewController */,
 				5450F281289F24EC0088F631 /* CartViewController */,
 				54C60902288F60CC0013E0F1 /* MapViewController */,
 				548E24102885D5CF00596A7F /* ProfileViewController */,
@@ -387,6 +403,7 @@
 			files = (
 				54FDBC6B287CB10E00481281 /* LaunchScreen.storyboard in Resources */,
 				BE427E39287CD732001A1E00 /* RegisterViewController.xib in Resources */,
+				542D13AB28A467A00048491A /* ItemContentViewController.xib in Resources */,
 				BE427E25287CD70A001A1E00 /* GoogleService-Info.plist in Resources */,
 				D39B9B30289AB510001038F0 /* Assets.xcassets in Resources */,
 				BE427E62287F7A05001A1E00 /* GroceryCollectionViewCell.xib in Resources */,
@@ -486,6 +503,7 @@
 				BE427E3E287CD732001A1E00 /* HomeViewController.m in Sources */,
 				54C60906288F60FB0013E0F1 /* MapViewController.m in Sources */,
 				5457D28928906AC6002FE786 /* Animation.swift in Sources */,
+				542D13AA28A467A00048491A /* ItemContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

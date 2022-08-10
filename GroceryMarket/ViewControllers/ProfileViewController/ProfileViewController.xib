@@ -103,7 +103,7 @@
         </view>
         <tapGestureRecognizer id="Aur-Vs-WoH">
             <connections>
-                <action selector="ImageViewDidTap:" destination="-1" id="Vtt-eX-v2V"/>
+                <action selector="onTap:" destination="-1" id="92f-4h-DaZ"/>
                 <outlet property="delegate" destination="dAm-qo-h0H" id="iiT-uC-rCt"/>
             </connections>
         </tapGestureRecognizer>
