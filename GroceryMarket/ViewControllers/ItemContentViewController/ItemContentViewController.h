@@ -17,6 +17,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *mapButton;
 @property (weak, nonatomic) IBOutlet UIButton *cartButton;
 
+@property (nonatomic, retain) NSString *storename;
+@property (nonatomic, retain) NSString *productname;
+@property (nonatomic, retain) NSString *price;
+@property (nonatomic, retain) NSString *logitude;
+@property (nonatomic, retain) NSString *latitude;
+@property (nonatomic, retain) NSString *storeloc;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

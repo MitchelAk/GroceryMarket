@@ -69,7 +69,17 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     cell.textLabel.text = [displayGrocery objectAtIndex:indexPath.row];
+    
+    cell.tag = indexPath.row;
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    
+    NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
+
+    NSLog(@"You clicked %@", ff);
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
