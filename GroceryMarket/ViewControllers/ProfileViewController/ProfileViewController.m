@@ -111,10 +111,10 @@
 
 
 - (IBAction)didTapLogout:(id)sender {
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    LandingViewController *logout = [[LandingViewController alloc] initWithNibName:@"LandingViewController" bundle:nil];
+    [self.navigationController pushViewController:logout animated:YES];
 
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LandingViewController *landingViewController = [storyboard instantiateViewControllerWithIdentifier:@"LandingViewController"];
-    appDelegate.window.rootViewController = landingViewController;
+    [[FIRAuth auth] signOut:nil];
+
 }
 @end
