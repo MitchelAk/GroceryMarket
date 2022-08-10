@@ -76,12 +76,12 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableVIew didSelectRowAtIndexPath:( NSIndexPath *)indexPath{
 
     
     NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
 
-    NSLog(@"You clicked %@", ff);
+    NSLog(@"You clicked");
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
