@@ -30,8 +30,13 @@
     self.db = [FIRFirestore firestore];
 
     [self getuserDetails];
+    
+    [self.profileImage targetForAction:@selector(openGallery:) withSender:self];
 }
 
+- (IBAction)openGallery:(id)sender {
+    NSLog(@"You want to open gallery");
+}
 
 - (void)getuserDetails{
     FIRUser *user = [FIRAuth auth].currentUser;
