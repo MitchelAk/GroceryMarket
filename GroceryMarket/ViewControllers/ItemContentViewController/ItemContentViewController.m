@@ -19,12 +19,14 @@
     
     NSLog(@"ItemView prds %@, %@, %@, %@", self.image, self.price, self.productname, self.storename );
     
+    NSString *combPrice = [NSString stringWithFormat:@"%s%@", "$", self.price];
+
     NSURL *imageurl = [NSURL URLWithString:self.image];
     
     self.productImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
 
     self.productName.text = self.productname;
-    self.productPrice.text = self.price;
+    self.productPrice.text = combPrice;
     self.storeName.text = self.storename;
     
 }
