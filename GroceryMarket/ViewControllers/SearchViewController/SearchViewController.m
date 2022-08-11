@@ -106,7 +106,7 @@
     itemview.storeloc = gg.storeLoc;
     itemview.storename = gg.storename;
     itemview.latitude = gg.latitude;
-    itemview.logitude = gg.longitude;
+    itemview.longitude = gg.longitude;
     itemview.price = gg.price;
     itemview.image = gg.imageUrl;
     itemview.productname = gg.title;

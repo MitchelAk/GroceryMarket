@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, retain) NSString *image;
 @property (nonatomic, retain) NSString *productname;
 @property (nonatomic, retain) NSString *price;
-@property (nonatomic, retain) NSString *logitude;
+@property (nonatomic, retain) NSString *longitude;
 @property (nonatomic, retain) NSString *latitude;
 @property (nonatomic, retain) NSString *storeloc;
 
