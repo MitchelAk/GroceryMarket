@@ -29,6 +29,8 @@
     self.productPrice.text = combPrice;
     self.storeName.text = self.storename;
     
+    self.cartButton
+    
 }
 
 
