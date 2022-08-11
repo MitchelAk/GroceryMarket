@@ -6,7 +6,7 @@
 //
 
 #import "ProfileViewController.h"
-#import "LandingViewController.h"
+#import "SignInViewController.h"
 @import FirebaseCore;
 @import FirebaseFirestore;
 @import FirebaseAuth;
@@ -115,10 +115,10 @@
 
 
 - (IBAction)didTapLogout:(id)sender {
-    LandingViewController *logout = [[LandingViewController alloc] initWithNibName:@"LandingViewController" bundle:nil];
+    SignInViewController *logout = [[SignInViewController alloc] initWithNibName:@"Main." bundle:nil];
     [self.navigationController pushViewController:logout animated:YES];
 
-//    [[FIRAuth auth] signOut:nil];
+    [[FIRAuth auth] signOut:nil];
 
 }
 @end

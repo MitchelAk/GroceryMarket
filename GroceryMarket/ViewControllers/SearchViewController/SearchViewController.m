@@ -126,7 +126,7 @@
             if (r.location != NSNotFound){
                 [displayGrocery addObject:string];
                 [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(reload) object:nil];
-                [self performSelector:@selector(reload) withObject:nil afterDelay:5.5];
+                [self performSelector:@selector(reload) withObject:nil afterDelay:2.5];
 
             }
         }
