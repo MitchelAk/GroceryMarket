@@ -108,7 +108,7 @@
     itemview.latitude = gg.latitude;
     itemview.logitude = gg.longitude;
     itemview.price = gg.price;
-    itemview.productImage = gg.imageUrl;
+    itemview.image = gg.imageUrl;
     itemview.productname = gg.title;
     
     [self.navigationController pushViewController: itemview animated:YES];
