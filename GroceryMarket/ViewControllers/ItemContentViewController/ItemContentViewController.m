@@ -18,11 +18,6 @@
 @end
 
 @implementation ItemContentViewController
-- (IBAction)mapTapped:(id)sender {
-}
-
-- (IBAction)cartTapped:(id)sender {
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,14 +36,10 @@
     self.productPrice.text = combPrice;
     self.storeName.text = self.storename;
     
-    [self.cartButton setTitle:@"" forState: UIControlStateNormal];
-    [self.mapButton setTitle:@"" forState: UIControlStateNormal];
-
-    [self.cartButton targetForAction:@selector(addtoCart:) withSender:self];
-    [self.mapButton targetForAction:@selector(openMap:) withSender:self];
 }
 
-- (IBAction)openMap:(id)sender{
+- (IBAction)mapTapped:(id)sender {
+    NSLog(@"You tapped mapBtn");
     MapViewController  *mapVC = [[MapViewController alloc] init];
     mapVC.storeLoc = self.storeloc;
     mapVC.storename = self.storename;
@@ -56,10 +47,12 @@
     mapVC.longitude = self.longitude;
     [self.navigationController pushViewController: mapVC animated:YES];
 
+
 }
 
-- (IBAction)addtoCart:(id)sender{
-    
+- (IBAction)cartTapped:(id)sender {
+    NSLog(@"You tapped cartBtn");
+
     FIRUser *user = [FIRAuth auth].currentUser;
     NSString *uid = user.uid;
 
@@ -84,8 +77,7 @@
     }];
         
     }
-    
-}
 
+}
 
 @end
