@@ -6,10 +6,15 @@
 //
 
 #import "SearchViewController.h"
+#import "ItemContentViewController.h"
+#import "Grocery.h"
+
 @import FirebaseCore;
 @import FirebaseFirestore;
 
 @interface SearchViewController ()
+
+@property (nonatomic, strong) NSMutableArray<Grocery *> *groceryList;
 @property (readwrite, nonatomic) FIRFirestore *db;
 
 
@@ -24,6 +29,8 @@
     [super viewDidLoad];
     
     self.db = [FIRFirestore firestore];
+    self.groceryList = NSMutableArray.new;
+
     
     [[self.db collectionWithPath:@"products"] getDocumentsWithCompletion:^(FIRQuerySnapshot * _Nullable snapshot, NSError * _Nullable error) {
         if (error != nil) {
@@ -34,6 +41,19 @@
             for (FIRDocumentSnapshot *document in snapshot.documents){
                 NSLog(@"Search Products: %@", document.data[@"pname"]);
 
+                Grocery *grocery1 = Grocery.new;
+                grocery1.title = document.data[@"pname"];
+                grocery1.price = document.data[@"price"];
+                grocery1.latitude = document.data[@"latitude"];
+                grocery1.longitude = document.data[@"longitude"];
+                grocery1.storename = document.data[@"storename"];
+                grocery1.storeid = document.documentID;
+                grocery1.imageUrl = document.data[@"image"];
+                grocery1.storeLoc = document.data[@"storeloc"];
+                                
+                [self.groceryList addObject:grocery1];
+
+                
                 [self->groceryArray addObject:document.data[@"pname"]];
                 
 
@@ -78,9 +98,21 @@
 
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:( NSIndexPath *)indexPath{
 
-    NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
 
-    NSLog(@"You clicked %@", ff);
+    
+    Grocery *gg = self.groceryList[indexPath.row];
+
+    ItemContentViewController  *itemview = [[ItemContentViewController alloc] init];
+    itemview.storeloc = gg.storeLoc;
+    itemview.storename = gg.storename;
+    itemview.latitude = gg.latitude;
+    itemview.logitude = gg.longitude;
+    itemview.price = gg.price;
+    itemview.productImage = gg.imageUrl;
+    itemview.productname = gg.title;
+    
+    [self.navigationController pushViewController: itemview animated:YES];
+
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
