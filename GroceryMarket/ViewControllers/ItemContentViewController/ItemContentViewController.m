@@ -12,6 +12,11 @@
 @end
 
 @implementation ItemContentViewController
+- (IBAction)mapTapped:(id)sender {
+}
+
+- (IBAction)cartTapped:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
