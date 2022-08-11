@@ -78,10 +78,9 @@
 
 - (void)tableView:(UITableView *)atableView didSelectRowAtIndexPath:( NSIndexPath *)indexPath{
 
-    
-//    NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
+    NSString *ff = [displayGrocery objectAtIndex:indexPath.row];
 
-    NSLog(@"You clicked %ld", (long)indexPath.row);
+    NSLog(@"You clicked %@", ff);
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
