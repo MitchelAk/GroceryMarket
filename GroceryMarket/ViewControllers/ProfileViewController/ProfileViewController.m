@@ -115,7 +115,7 @@
 
 
 - (IBAction)didTapLogout:(id)sender {
-    SignInViewController *logout = [[SignInViewController alloc] initWithNibName:@"Main." bundle:nil];
+    SignInViewController *logout = [[SignInViewController alloc] initWithNibName:@"SignInViewController" bundle:nil];
     [self.navigationController pushViewController:logout animated:YES];
 
     [[FIRAuth auth] signOut:nil];

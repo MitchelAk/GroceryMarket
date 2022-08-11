@@ -26,8 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // [FIRApp configure];
-
     self.db = [FIRFirestore firestore];
 
 }

@@ -19,6 +19,12 @@
 
 @implementation ItemContentViewController
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    [self.cartButton setTitle:@"" forState: UIControlStateNormal];
+    [self.mapButton setTitle:@"" forState: UIControlStateNormal];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -60,7 +66,7 @@
     [[[[self.db collectionWithPath:@"users"]
       documentWithPath: uid] collectionWithPath:@"mycart"]
       addDocumentWithData:@{
-        @"pname":self._productname,
+        @"pname":self.productname,
         @"price":self.price,
         @"image":self.image,
         @"longitude":self.longitude,
