@@ -15,7 +15,7 @@
                 <outlet property="EmailField" destination="Jcu-m6-XkR" id="40e-q7-43K"/>
                 <outlet property="PhoneField" destination="eLy-rn-77P" id="Tdl-Rm-yHe"/>
                 <outlet property="UsernameField" destination="nPa-wA-YE7" id="xAk-kO-CQ7"/>
-                <outlet property="profileImage" destination="dAm-qo-h0H" id="u66-63-nkM"/>
+                <outlet property="profileImage" destination="Yra-z2-tLb" id="L0b-M9-E7B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,15 +24,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dAm-qo-h0H">
-                    <rect key="frame" x="160" y="65.5" width="120" height="61"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="Aur-Vs-WoH" appends="YES" id="M9c-ot-1d5"/>
-                        <outletCollection property="gestureRecognizers" destination="tcf-tS-Ei5" appends="YES" id="Veg-k8-oqN"/>
-                    </connections>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-aN-xB1">
                     <rect key="frame" x="35" y="183" width="90" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -97,25 +88,32 @@
                         <action selector="didTapLogout:" destination="-1" eventType="touchUpInside" id="Rev-mi-Afc"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yra-z2-tLb">
+                    <rect key="frame" x="58" y="61" width="240" height="82"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2i-ct-Nzl">
+                    <rect key="frame" x="314" y="87" width="93" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add image"/>
+                    <connections>
+                        <action selector="addImageButton:" destination="-1" eventType="touchUpInside" id="JSy-4e-BkP"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="15.942028985507248" y="-21.428571428571427"/>
+            <gestureRecognizers/>
+            <point key="canvasLocation" x="-674" y="-21"/>
         </view>
         <tapGestureRecognizer id="Aur-Vs-WoH">
             <connections>
                 <action selector="onTap:" destination="-1" id="92f-4h-DaZ"/>
-                <outlet property="delegate" destination="dAm-qo-h0H" id="iiT-uC-rCt"/>
-            </connections>
-        </tapGestureRecognizer>
-        <tapGestureRecognizer id="tcf-tS-Ei5">
-            <connections>
-                <action selector="didTapImage:" destination="-1" id="rsR-Ah-Z3F"/>
             </connections>
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

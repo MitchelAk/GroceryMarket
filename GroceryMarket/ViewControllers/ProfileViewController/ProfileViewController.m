@@ -12,7 +12,6 @@
 @import FirebaseAuth;
 
 @interface ProfileViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 @property (readwrite, nonatomic) FIRFirestore *db;
 
 @end
@@ -21,9 +20,7 @@
 - (IBAction)onTap:(id)sender {
    [self.view endEditing:YES];
 }
-- (IBAction)didTapImage:(id)sender {
-    
-}
+
 
 
 - (void)viewDidLoad {
@@ -40,6 +37,8 @@
 - (IBAction)openGallery:(id)sender {
     NSLog(@"You want to open gallery");
 }
+
+
 
 - (void)getuserDetails{
     FIRUser *user = [FIRAuth auth].currentUser;
@@ -128,5 +127,8 @@
 
     [[FIRAuth auth] signOut:nil];
 
+}
+- (IBAction)addImageButton:(id)sender {
+    
 }
 @end

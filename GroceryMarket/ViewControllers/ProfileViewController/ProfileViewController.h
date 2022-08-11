@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *PasswordField;
 @property (weak, nonatomic) IBOutlet UITextField *PhoneField;
 @property (weak, nonatomic) IBOutlet UITextField *AddressField;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+- (IBAction)addImageButton:(id)sender;
 
 @end
 
