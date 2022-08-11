@@ -67,13 +67,13 @@
     [[[[self.db collectionWithPath:@"users"]
       documentWithPath: uid] collectionWithPath:@"mycart"]
       addDocumentWithData:@{
-        @"pname":gg.title,
-        @"price":gg.price,
-        @"image":gg.imageUrl,
-        @"longitude":gg.longitude,
-        @"latitude":gg.latitude,
-        @"storeloc":gg.storeLoc,
-        @"storename":gg.storename,
+        @"pname":self._productname,
+        @"price":self.price,
+        @"image":self.image,
+        @"longitude":self.longitude,
+        @"latitude":self.latitude,
+        @"storeloc":self.storeloc,
+        @"storename":self.storename,
 
       } completion:^(NSError *  _Nullable error){
         if(error != nil){
