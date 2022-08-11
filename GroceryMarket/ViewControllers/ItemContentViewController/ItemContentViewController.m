@@ -17,7 +17,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    NSLog(@"Itemview %@",self.productname);
+    NSURL *imageurl = [NSURL URLWithString:self.image];
+    
+    self.productImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
+
+    self.productName.text = self.productname;
+    self.productPrice.text = self.price;
+    self.storeName.text = self.storename;
+    
 }
 
 
