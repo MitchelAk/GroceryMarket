@@ -15,7 +15,7 @@
                 <outlet property="EmailField" destination="Jcu-m6-XkR" id="40e-q7-43K"/>
                 <outlet property="PhoneField" destination="eLy-rn-77P" id="Tdl-Rm-yHe"/>
                 <outlet property="UsernameField" destination="nPa-wA-YE7" id="xAk-kO-CQ7"/>
-                <outlet property="profileImage" destination="dAm-qo-h0H" id="Rdl-Qe-ium"/>
+                <outlet property="profileImage" destination="dAm-qo-h0H" id="u66-63-nkM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +30,7 @@
                     <gestureRecognizers/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="Aur-Vs-WoH" appends="YES" id="M9c-ot-1d5"/>
+                        <outletCollection property="gestureRecognizers" destination="tcf-tS-Ei5" appends="YES" id="Veg-k8-oqN"/>
                     </connections>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-aN-xB1">
@@ -105,6 +106,11 @@
             <connections>
                 <action selector="onTap:" destination="-1" id="92f-4h-DaZ"/>
                 <outlet property="delegate" destination="dAm-qo-h0H" id="iiT-uC-rCt"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="tcf-tS-Ei5">
+            <connections>
+                <action selector="didTapImage:" destination="-1" id="rsR-Ah-Z3F"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

@@ -21,6 +21,9 @@
 - (IBAction)onTap:(id)sender {
    [self.view endEditing:YES];
 }
+- (IBAction)didTapImage:(id)sender {
+    
+}
 
 
 - (void)viewDidLoad {
