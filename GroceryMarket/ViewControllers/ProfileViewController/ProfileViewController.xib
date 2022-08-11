@@ -15,7 +15,7 @@
                 <outlet property="EmailField" destination="Jcu-m6-XkR" id="40e-q7-43K"/>
                 <outlet property="PhoneField" destination="eLy-rn-77P" id="Tdl-Rm-yHe"/>
                 <outlet property="UsernameField" destination="nPa-wA-YE7" id="xAk-kO-CQ7"/>
-                <outlet property="profileImage" destination="Yra-z2-tLb" id="L0b-M9-E7B"/>
+                <outlet property="profileImage" destination="tdL-pJ-Bwi" id="Hgb-x5-trP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -88,24 +88,15 @@
                         <action selector="didTapLogout:" destination="-1" eventType="touchUpInside" id="Rev-mi-Afc"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yra-z2-tLb">
-                    <rect key="frame" x="58" y="61" width="240" height="82"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-pJ-Bwi">
+                    <rect key="frame" x="106" y="44" width="204" height="119"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2i-ct-Nzl">
-                    <rect key="frame" x="314" y="87" width="93" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Add image"/>
-                    <connections>
-                        <action selector="addImageButton:" destination="-1" eventType="touchUpInside" id="JSy-4e-BkP"/>
-                    </connections>
-                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <gestureRecognizers/>
-            <point key="canvasLocation" x="-674" y="-21"/>
+            <point key="canvasLocation" x="-72" y="52"/>
         </view>
         <tapGestureRecognizer id="Aur-Vs-WoH">
             <connections>
