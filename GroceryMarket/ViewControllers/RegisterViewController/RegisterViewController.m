@@ -79,6 +79,7 @@
                                         NSLog(@"%@", error);
                                     }else{
                                         NSURL *downloadUrl = URL;
+                                        NSString *dpLink = downloadUrl.absoluteString;
                                         NSLog(@"%@", downloadUrl);
                                         
                                         [[[self.db collectionWithPath:@"users"]
@@ -88,11 +89,16 @@
                                             @"phone":phone,
                                             @"username":username,
                                             @"address":address,
-                                            @"profilepic":downloadUrl
+                                            @"profilepic":dpLink
+                                            
                                           } completion:^(NSError *  _Nullable error){
                                             if(error != nil){
                                                 NSLog(@"Error adding document: %@", [error localizedDescription]);
                                             } else{
+                                                NSLog(@"The app is logged in successfully");
+                                                SignInViewController  *homeVC = [[SignInViewController alloc] init];
+                                                [self.navigationController pushViewController: homeVC animated:YES];
+
                                                 NSLog(@"Document added with ID: %@", uid);
                                             }
                                         }];
@@ -101,10 +107,6 @@
                                 }];
                             }
                         }];
-
-                    NSLog(@"The app is logged in successfully");
-                    SignInViewController  *homeVC = [[SignInViewController alloc] init];
-                    [self.navigationController pushViewController: homeVC animated:YES];
 
                 }else{
                     NSLog(@"Login not successful: %@", [error localizedDescription]);
@@ -124,21 +126,17 @@
     if ([_usernameField.text isEqualToString:@""] || [_profileImage.image isEqual:nil] || [_emailField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_phoneField.text isEqualToString:@""] || [_addressField.text isEqualToString:@""]) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oooops"
-                                                                       message:@"Please fill out all required fields"
-                                                                preferredStyle:(UIAlertControllerStyleAlert)];
+        message:@"Please fill out all required fields" preferredStyle:(UIAlertControllerStyleAlert)];
         // create a cancel action
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
-                                                               style:UIAlertActionStyleCancel
-                                                             handler:^(UIAlertAction * _Nonnull action) {
+        style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
             // handle cancel response here. Doing nothing will dismiss the view.
         }];
         // add the cancel action to the alertController
         [alert addAction:cancelAction];
         
         // create an OK action
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
-                                                           style:UIAlertActionStyleDefault
-                                                         handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             // handle response here.
         }];
         
