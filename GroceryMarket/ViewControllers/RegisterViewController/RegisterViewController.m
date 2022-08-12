@@ -164,7 +164,7 @@
 
     FIRStorageReference *storageRef = [storage reference];
 
-    FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
+    FIRStorageUploadTask *uploadTask = [storageRef putFile:url metadata:metadata];
 
     [uploadTask observeStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot *snapshot){
 
