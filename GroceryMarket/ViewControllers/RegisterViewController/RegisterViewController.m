@@ -158,7 +158,7 @@
     NSURL *localFile = url;
     
     FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
-    metadata.contentType = @"image/jpeg";
+    metadata.contentType = @"image/jpg";
 
     FIRStorage *storage = [FIRStorage storage];
 
