@@ -31,13 +31,7 @@
 
     [self getuserDetails];
     
-    [self.profileImage targetForAction:@selector(openGallery:) withSender:self];
 }
-
-- (IBAction)openGallery:(id)sender {
-    NSLog(@"You want to open gallery");
-}
-
 
 
 - (void)getuserDetails{
@@ -54,13 +48,17 @@
                 NSString *username = snapshot.data[@"username"];
                 NSString *email = snapshot.data[@"email"];
                 NSString *phone = snapshot.data[@"phone"];
+                NSString *dp = snapshot.data[@"profilepic"];
 
 
                 self.AddressField.text = address;
                 self.PhoneField.text = phone;
                 self.UsernameField.text = username;
                 self.EmailField.text = email;
+                NSURL *imageurl = [NSURL URLWithString:dp];
                 
+                self.profileImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
+
                 
             }else{
                 NSLog(@"Document does not exist");
