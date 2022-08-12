@@ -146,7 +146,7 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:( NSDictionary *)info {
     UIImage *selectedimg = [info valueForKey:UIImagePickerControllerOriginalImage];
-    NSURL *url = [info valueForKey:UIImagePickerControllerReferenceURL];
+    NSURL *url = [info valueForKey:UIImagePickerControllerPHAsset];
 
     self.profileImage.image = selectedimg;
      
