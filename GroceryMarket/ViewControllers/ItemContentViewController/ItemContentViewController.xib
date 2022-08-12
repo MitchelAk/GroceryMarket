@@ -79,7 +79,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="BSj-ja-S1P"/>
                                         <constraint firstAttribute="width" constant="70" id="cp0-Yg-QFO"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
@@ -87,7 +86,7 @@
                                         <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
                                             <integer key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
@@ -99,7 +98,6 @@
                                     <rect key="frame" x="304" y="0.0" width="70" height="60"/>
                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="TPz-rw-XL2"/>
                                         <constraint firstAttribute="width" constant="70" id="XbM-qR-DEC"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
@@ -117,10 +115,7 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="W6N-Ed-W9m" firstAttribute="width" secondItem="hL9-TC-ZMC" secondAttribute="width" id="0Z9-RL-euQ"/>
-                                <constraint firstItem="W6N-Ed-W9m" firstAttribute="height" secondItem="hL9-TC-ZMC" secondAttribute="height" id="EnO-Ge-24j"/>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Old-A5-KF6"/>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="t9E-PR-RsN"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -143,7 +138,7 @@
                 <constraint firstAttribute="trailing" secondItem="9Wf-gN-zGw" secondAttribute="trailing" id="UEF-AX-rso"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="9Wf-gN-zGw" secondAttribute="bottom" constant="58" id="Ukq-Wt-9Os"/>
             </constraints>
-            <point key="canvasLocation" x="-528" y="208"/>
+            <point key="canvasLocation" x="241" y="12"/>
         </view>
     </objects>
     <resources>

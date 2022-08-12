@@ -23,7 +23,9 @@
     [super awakeFromNib];
     [self.cartButton setTitle:@"" forState: UIControlStateNormal];
     [self.mapButton setTitle:@"" forState: UIControlStateNormal];
+    
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

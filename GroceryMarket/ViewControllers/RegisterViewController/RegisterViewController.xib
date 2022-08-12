@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REGISTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6m-eT-H0V">
-                    <rect key="frame" x="43" y="63" width="305" height="21"/>
+                    <rect key="frame" x="48" y="53" width="305" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <nil key="textColor"/>
@@ -107,7 +107,7 @@
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dE6-Vg-qXt">
-                    <rect key="frame" x="75" y="92" width="240" height="66"/>
+                    <rect key="frame" x="99" y="83.5" width="205" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-fk-DKZ">
@@ -118,7 +118,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-pO-Qlq">
-                    <rect key="frame" x="255" y="110" width="93" height="31"/>
+                    <rect key="frame" x="109" y="144" width="185" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Add Image"/>
@@ -133,7 +133,7 @@
             <connections>
                 <outletCollection property="gestureRecognizers" destination="Elu-Ld-vRH" appends="YES" id="aFt-T8-zeV"/>
             </connections>
-            <point key="canvasLocation" x="506" y="370"/>
+            <point key="canvasLocation" x="505.79710144927537" y="369.64285714285711"/>
         </view>
         <tapGestureRecognizer id="Elu-Ld-vRH">
             <connections>
