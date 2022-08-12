@@ -163,48 +163,66 @@
     FIRStorage *storage = [FIRStorage storage];
 
     FIRStorageReference *storageRef = [storage reference];
+    FIRStorageReference *profileRef = [storageRef child:@"images/dp.jpg"];
 
-    FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
 
-    [uploadTask observeStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot *snapshot){
-
-    }];
-
-    [uploadTask observeStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
-
-    }];
-
-    [uploadTask observeStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
-        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount;
-    }];
-
-    [uploadTask observeStatus:FIRStorageTaskStatusSuccess handler:^(FIRStorageTaskSnapshot *snapshot){
-
-    }];
-
-    [uploadTask observeStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
-        if (snapshot.error !=nil){
-            switch (snapshot.error.code) {
-                case FIRStorageErrorCodeObjectNotFound:
-
-                    break;
-
-                    case FIRStorageErrorCodeUnauthorized:
-
-                        break;
-
-                case FIRStorageErrorCodeCancelled:
-
-                    break;
-
-                case FIRStorageErrorCodeUnknown:
-
-                    break;
-
-            }
-
+    FIRStorageUploadTask *uploadTask = [profileRef putFile:localFile metadata:nil completion:^(FIRStorageMetadata * metadata, NSError * error) {
+        if (error !=nil) {
+            NSLog(@"%@", error);
+        }else{
+//            int size = metadata.size;
+            [profileRef downloadURLWithCompletion:^(NSURL * URL, NSError * _Nullable error) {
+                if (error !=nil) {
+                    NSLog(@"%@", error);
+                }else{
+                    NSURL *downloadUrl = URL;
+                    NSLog(@"%@", downloadUrl);
+                }
+            }];
         }
     }];
+
+//    [uploadTask observeStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot *snapshot){
+//
+//    }];
+//
+//    [uploadTask observeStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
+//
+//    }];
+//
+//    [uploadTask observeStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
+//        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount;
+//        NSLog(@"%f",percentComplete);
+//    }];
+//
+//    [uploadTask observeStatus:FIRStorageTaskStatusSuccess handler:^(FIRStorageTaskSnapshot *snapshot){
+//        NSLog(@"%@",snapshot);
+//
+//    }];
+//
+//    [uploadTask observeStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
+//        if (snapshot.error !=nil){
+//            switch (snapshot.error.code) {
+//                case FIRStorageErrorCodeObjectNotFound:
+//
+//                    break;
+//
+//                    case FIRStorageErrorCodeUnauthorized:
+//
+//                        break;
+//
+//                case FIRStorageErrorCodeCancelled:
+//
+//                    break;
+//
+//                case FIRStorageErrorCodeUnknown:
+//
+//                    break;
+//
+//            }
+//
+//        }
+//    }];
 
 }
 
