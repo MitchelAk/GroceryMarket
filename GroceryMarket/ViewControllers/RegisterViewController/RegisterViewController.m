@@ -43,19 +43,11 @@
     NSString *phone = self.phoneField.text;
     NSString *username = self.usernameField.text;
 
-    UIProgressView *progress;
-    progress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
-    progress.progressTintColor = [UIColor colorWithRed:187.0/255 green:160.0/255 blue:209.0/255 alpha:1.0];
-    [[progress layer] setFrame:CGRectMake(50, 50, 50, 50)];
-    [[progress layer]setBorderColor:[UIColor redColor].CGColor];
-    progress.trackTintColor = [UIColor clearColor];
-    [progress setProgress:(float)(50/100) animated:YES];
-    
-    [[progress layer] setCornerRadius:progress.frame.size.width / 2];
-    [[progress layer]setBorderWidth:10];
-    [[progress layer]setMasksToBounds:TRUE];
-    progress.clipsToBounds = YES;
-
+    UIActivityIndicatorView *activityindicator= [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    activityindicator.alpha = 1.0;
+    [self.view addSubview:activityindicator];
+    activityindicator.center = CGPointMake([[UIScreen mainScreen]bounds].size.width/2, [[UIScreen mainScreen]bounds].size.height/2);
+    [activityindicator startAnimating];
     
     /// Load activity indicator
     theLoadingView = [[GroceryCommonFunction shared] showLoadingView];
@@ -68,7 +60,6 @@
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
         if (error == nil ) {
             
-            [self.view addSubview:progress];
                         NSString *uid = authResult.user.uid;
                     
                         FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
@@ -109,8 +100,7 @@
                                                 SignInViewController  *homeVC = [[SignInViewController alloc] init];
                                                 [self.navigationController pushViewController: homeVC animated:YES];
 
-                                                [self.view willRemoveSubview:progress];
-                                                NSLog(@"Document added with ID: %@", uid);
+                                                [activityindicator stopAnimating];                                                NSLog(@"Document added with ID: %@", uid);
                                             }
                                         }];
 
