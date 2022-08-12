@@ -7,6 +7,7 @@
 
 #import "RegisterViewController.h"
 #import "HomeViewController.h"
+#import "SignInViewController.h"
 @import FirebaseCore;
 @import FirebaseAuth;
 @import FirebaseFirestore;
@@ -57,36 +58,59 @@
                                  completion:^(FIRAuthDataResult * _Nullable authResult,
                                               NSError * _Nullable error) {
                 if(error == nil){
+                        NSString *uid = authResult.user.uid;
                     
+                        FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
+                        metadata.contentType = @"image/jpeg";
+
+                        FIRStorage *storage = [FIRStorage storage];
+
+                        FIRStorageReference *storageRef = [storage reference];
+                        FIRStorageReference *profileRef = [storageRef child:uid];
+
+
+                        FIRStorageUploadTask *uploadTask = [profileRef putFile:self.profiledpUrl metadata:nil completion:^(FIRStorageMetadata * metadata, NSError * error) {
+                            if (error !=nil) {
+                                NSLog(@"%@", error);
+                            }else{
+                    //            int size = metadata.size;
+                                [profileRef downloadURLWithCompletion:^(NSURL * URL, NSError * _Nullable error) {
+                                    if (error !=nil) {
+                                        NSLog(@"%@", error);
+                                    }else{
+                                        NSURL *downloadUrl = URL;
+                                        NSLog(@"%@", downloadUrl);
+                                        
+                                        [[[self.db collectionWithPath:@"users"]
+                                          documentWithPath: uid]
+                                          setData:@{
+                                            @"email":email,
+                                            @"phone":phone,
+                                            @"username":username,
+                                            @"address":address,
+                                            @"profilepic":downloadUrl
+                                          } completion:^(NSError *  _Nullable error){
+                                            if(error != nil){
+                                                NSLog(@"Error adding document: %@", [error localizedDescription]);
+                                            } else{
+                                                NSLog(@"Document added with ID: %@", uid);
+                                            }
+                                        }];
+
+                                    }
+                                }];
+                            }
+                        }];
+
                     NSLog(@"The app is logged in successfully");
-                    HomeViewController  *homeVC = [[HomeViewController alloc] init];
+                    SignInViewController  *homeVC = [[SignInViewController alloc] init];
                     [self.navigationController pushViewController: homeVC animated:YES];
 
                 }else{
                     NSLog(@"Login not successful: %@", [error localizedDescription]);
                 }
             }];
-            
-            NSString *uid = authResult.user.uid;
-        
-            [[[self.db collectionWithPath:@"users"]
-              documentWithPath: uid]
-              setData:@{
-                @"email":email,
-                @"phone":phone,
-                @"username":username,
-                @"address":address,
-                @"profilepic":@""
-              } completion:^(NSError *  _Nullable error){
-                if(error != nil){
-                    NSLog(@"Error adding document: %@", [error localizedDescription]);
-                } else{
-                    NSLog(@"Document added with ID: %@", uid);
-                }
-            }];
-            
-            
-            
+                        
         } else {
             NSLog(@"error in create user: %@", [error localizedDescription]);
         }
@@ -155,74 +179,8 @@
     NSLog(@"You selected an image");
     NSLog(@"%@", url);
     
-    NSURL *localFile = url;
-    
-    FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
-    metadata.contentType = @"image/jpg";
+    self.profiledpUrl = url;
 
-    FIRStorage *storage = [FIRStorage storage];
-
-    FIRStorageReference *storageRef = [storage reference];
-    FIRStorageReference *profileRef = [storageRef child:@"images/"];
-
-
-    FIRStorageUploadTask *uploadTask = [profileRef putFile:localFile metadata:nil completion:^(FIRStorageMetadata * metadata, NSError * error) {
-        if (error !=nil) {
-            NSLog(@"%@", error);
-        }else{
-//            int size = metadata.size;
-            [profileRef downloadURLWithCompletion:^(NSURL * URL, NSError * _Nullable error) {
-                if (error !=nil) {
-                    NSLog(@"%@", error);
-                }else{
-                    NSURL *downloadUrl = URL;
-                    NSLog(@"%@", downloadUrl);
-                }
-            }];
-        }
-    }];
-
-//    [uploadTask observeStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot *snapshot){
-//
-//    }];
-//
-//    [uploadTask observeStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
-//
-//    }];
-//
-//    [uploadTask observeStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
-//        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount;
-//        NSLog(@"%f",percentComplete);
-//    }];
-//
-//    [uploadTask observeStatus:FIRStorageTaskStatusSuccess handler:^(FIRStorageTaskSnapshot *snapshot){
-//        NSLog(@"%@",snapshot);
-//
-//    }];
-//
-//    [uploadTask observeStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
-//        if (snapshot.error !=nil){
-//            switch (snapshot.error.code) {
-//                case FIRStorageErrorCodeObjectNotFound:
-//
-//                    break;
-//
-//                    case FIRStorageErrorCodeUnauthorized:
-//
-//                        break;
-//
-//                case FIRStorageErrorCodeCancelled:
-//
-//                    break;
-//
-//                case FIRStorageErrorCodeUnknown:
-//
-//                    break;
-//
-//            }
-//
-//        }
-//    }];
 
 }
 

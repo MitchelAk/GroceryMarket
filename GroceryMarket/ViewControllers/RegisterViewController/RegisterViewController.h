@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UITextField *addressField;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property(nonatomic,strong) NSURL *profiledpUrl;
+
 - (IBAction)addImageButton:(id)sender;
 
 - (IBAction)registerBtn:(id)sender;
