@@ -11,7 +11,8 @@ target 'GroceryMarket' do
     pod 'Firebase/Auth'
     pod 'Firebase/Core'
     pod 'Firebase/CoreOnly'
-    pod 'Firebase/Firestore' 
+    pod 'Firebase/Firestore'
+    pod 'Firebase/Storage'
     pod 'GoogleMaps'
     pod 'FloatingTabBarController'
    

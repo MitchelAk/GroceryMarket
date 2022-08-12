@@ -10,11 +10,12 @@
 @import FirebaseCore;
 @import FirebaseAuth;
 @import FirebaseFirestore;
+@import FirebaseStorage;
 
 @interface RegisterViewController ()
 
 @property (readwrite, nonatomic) FIRFirestore *db;
-@property (weak, nonatomic) NSURL *url;
+//@property (weak, nonatomic) NSURL *url;
 
 
 @end
@@ -145,14 +146,65 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:( UIImage *)image editingInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)editingInfo {
     UIImage *selectedimg = image;
-    _url = [editingInfo valueForKey:UIImagePickerControllerImageURL];
+    NSURL *url = [editingInfo valueForKey:UIImagePickerControllerImageURL];
 
     self.profileImage.image = selectedimg;
      
     [self.view setNeedsDisplay];
     [picker dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"You selected an image");
-    NSLog(@"%@", _url);
+    NSLog(@"%@", url);
+    
+    NSURL *localfile = url;
+    
+//    FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
+//    metadata.contentType = @"image/jpeg";
+//
+//    FIRStorage *storage = [FIRStorage storage];
+//
+//    FIRStorageReference *storageRef = [storage reference];
+//
+//    FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
+//
+//    [uploadTask observerStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot snapshot){
+//
+//    }];
+//
+//    [uploadTask observerStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
+//
+//    }];
+//
+//    [uploadTask observerStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
+//        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount);
+//    }];
+//
+//    [uploadTask observerStatus:FIRStorageTaskStatusSucess handler:^(FIRStorageTaskSnapshot *snapshot){
+//
+//    }];
+//
+//    [uploasdTask observerStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
+//        if (snapshot.error !=nil){
+//            switch (snapshot.error.code) {
+//                case FIRStorageErrorCodeObjectNotFound:
+//
+//                    break;
+//
+//                    case FIRStorageErrorCodeUnauthorized:
+//
+//                        break;
+//
+//                case FIRStorageErrorCodeCancelled:
+//
+//                    break;
+//
+//                case FIRStorageErrorCodeUnknown:
+//
+//                    break;
+//
+//            }
+//
+//        }
+//    }];
 
 }
 
