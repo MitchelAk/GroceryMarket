@@ -141,13 +141,14 @@
 }
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    NSLog(@"You selected an image");
     UIImage *selectedimg = info[UIImagePickerControllerEditedImage];
 
     self.profileImage.image = selectedimg;
      
     [self.view setNeedsDisplay];
     [picker dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"You selected an image %@", selectedimg);
+
 }
 
 @end
