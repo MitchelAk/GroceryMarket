@@ -155,7 +155,7 @@
     NSLog(@"You selected an image");
     NSLog(@"%@", url);
     
-    NSURL *localfile = url;
+    NSURL *localFile = url;
     
     FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
     metadata.contentType = @"image/jpeg";
@@ -166,23 +166,23 @@
 
     FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
 
-    [uploadTask observerStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot snapshot){
+    [uploadTask observeStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot *snapshot){
 
     }];
 
-    [uploadTask observerStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
+    [uploadTask observeStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
 
     }];
 
-    [uploadTask observerStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
-        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount);
+    [uploadTask observeStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
+        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount;
     }];
 
-    [uploadTask observerStatus:FIRStorageTaskStatusSucess handler:^(FIRStorageTaskSnapshot *snapshot){
+    [uploadTask observeStatus:FIRStorageTaskStatusSuccess handler:^(FIRStorageTaskSnapshot *snapshot){
 
     }];
 
-    [uploasdTask observerStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
+    [uploadTask observeStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
         if (snapshot.error !=nil){
             switch (snapshot.error.code) {
                 case FIRStorageErrorCodeObjectNotFound:
