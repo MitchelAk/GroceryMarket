@@ -126,8 +126,25 @@
 }
 
 - (IBAction)addImageButton:(id)sender {
+    NSLog(@"You want to select image");
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.delegate = self;
+        
+    [self presentViewController: picker animated:YES completion:nil];
+
+
+    }
     
 }
 
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    self.profileImage.image = info[UIImagePickerControllerEditedImage];
+    [self.view setNeedsDisplay];
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end
