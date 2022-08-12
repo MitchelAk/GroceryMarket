@@ -157,54 +157,54 @@
     
     NSURL *localfile = url;
     
-//    FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
-//    metadata.contentType = @"image/jpeg";
-//
-//    FIRStorage *storage = [FIRStorage storage];
-//
-//    FIRStorageReference *storageRef = [storage reference];
-//
-//    FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
-//
-//    [uploadTask observerStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot snapshot){
-//
-//    }];
-//
-//    [uploadTask observerStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
-//
-//    }];
-//
-//    [uploadTask observerStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
-//        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount);
-//    }];
-//
-//    [uploadTask observerStatus:FIRStorageTaskStatusSucess handler:^(FIRStorageTaskSnapshot *snapshot){
-//
-//    }];
-//
-//    [uploasdTask observerStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
-//        if (snapshot.error !=nil){
-//            switch (snapshot.error.code) {
-//                case FIRStorageErrorCodeObjectNotFound:
-//
-//                    break;
-//
-//                    case FIRStorageErrorCodeUnauthorized:
-//
-//                        break;
-//
-//                case FIRStorageErrorCodeCancelled:
-//
-//                    break;
-//
-//                case FIRStorageErrorCodeUnknown:
-//
-//                    break;
-//
-//            }
-//
-//        }
-//    }];
+    FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
+    metadata.contentType = @"image/jpeg";
+
+    FIRStorage *storage = [FIRStorage storage];
+
+    FIRStorageReference *storageRef = [storage reference];
+
+    FIRStorageUploadTask *uploadTask = [storageRef putFile:localFile metadata:metadata];
+
+    [uploadTask observerStatus:FIRStorageTaskStatusResume handler:^(FIRStorageTaskSnapshot snapshot){
+
+    }];
+
+    [uploadTask observerStatus:FIRStorageTaskStatusPause handler:^(FIRStorageTaskSnapshot *snapshot){
+
+    }];
+
+    [uploadTask observerStatus:FIRStorageTaskStatusProgress handler:^(FIRStorageTaskSnapshot *snapshot){
+        double percentComplete = 100.0 * (snapshot.progress.completedUnitCount) / snapshot.progress.totalUnitCount);
+    }];
+
+    [uploadTask observerStatus:FIRStorageTaskStatusSucess handler:^(FIRStorageTaskSnapshot *snapshot){
+
+    }];
+
+    [uploasdTask observerStatus:FIRStorageTaskStatusFailure handler:^(FIRStorageTaskSnapshot *snapshot){
+        if (snapshot.error !=nil){
+            switch (snapshot.error.code) {
+                case FIRStorageErrorCodeObjectNotFound:
+
+                    break;
+
+                    case FIRStorageErrorCodeUnauthorized:
+
+                        break;
+
+                case FIRStorageErrorCodeCancelled:
+
+                    break;
+
+                case FIRStorageErrorCodeUnknown:
+
+                    break;
+
+            }
+
+        }
+    }];
 
 }
 
