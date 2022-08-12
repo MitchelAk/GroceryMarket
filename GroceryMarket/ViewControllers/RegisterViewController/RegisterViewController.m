@@ -8,6 +8,7 @@
 #import "RegisterViewController.h"
 #import "HomeViewController.h"
 #import "SignInViewController.h"
+#import <QuartzCore/QuartzCore.h>
 @import FirebaseCore;
 @import FirebaseAuth;
 @import FirebaseFirestore;
@@ -53,11 +54,20 @@
                                           NSError * _Nullable error) {
         [[GroceryCommonFunction shared] hideLoadingView:self->theLoadingView];
         if (error == nil ) {
-            [[FIRAuth auth] signInWithEmail:email
-                                   password:password
-                                 completion:^(FIRAuthDataResult * _Nullable authResult,
-                                              NSError * _Nullable error) {
-                if(error == nil){
+            UIProgressView *progress;
+            progress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+            progress.progressTintColor = [UIColor colorWithRed:187.0/255 green:160.0/255 blue:209.0/255 alpha:1.0];
+            [[progress layer] setFrame:CGRectMake(20, 50, 200, 200)];
+            [[progress layer]setBorderColor:[UIColor redColor].CGColor];
+            progress.trackTintColor = [UIColor clearColor];
+            [progress setProgress:(float)(50/100) animated:YES];
+            
+            [[progress layer] setCornerRadius:progress.frame.size.width / 2];
+            [[progress layer]setBorderWidth:3];
+            [[progress layer]setMasksToBounds:TRUE];
+            progress.clipsToBounds = YES;
+            
+            [self.view addSubview:progress];
                         NSString *uid = authResult.user.uid;
                     
                         FIRStorageMetadata *metadata = [[FIRStorageMetadata alloc] init];
@@ -95,10 +105,10 @@
                                             if(error != nil){
                                                 NSLog(@"Error adding document: %@", [error localizedDescription]);
                                             } else{
-                                                NSLog(@"The app is logged in successfully");
                                                 SignInViewController  *homeVC = [[SignInViewController alloc] init];
                                                 [self.navigationController pushViewController: homeVC animated:YES];
 
+                                                [self.view willRemoveSubview:progress];
                                                 NSLog(@"Document added with ID: %@", uid);
                                             }
                                         }];
@@ -107,14 +117,9 @@
                                 }];
                             }
                         }];
-
-                }else{
-                    NSLog(@"Login not successful: %@", [error localizedDescription]);
-                }
-            }];
                         
         } else {
-            NSLog(@"error in create user: %@", [error localizedDescription]);
+            NSLog(@"error in creating user: %@", [error localizedDescription]);
         }
         
         

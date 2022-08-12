@@ -89,8 +89,11 @@
     cell.groceryTitle.text = grocery.title;
     cell.groceryPrice.text = combPrice;
     cell.mapButton.tag = indexPath.row;
+    cell.cancelButton.tag = indexPath.row;
 
     [[cell mapButton] addTarget:self action:@selector(mapAction:event:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [[cell cancelButton] addTarget:self action:@selector(removeItem:event:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -112,7 +115,7 @@
 
 }
 
-- (IBAction)clickEvent:(id)sender event:(id)event{
+- (IBAction)removeItem:(id)sender event:(id)event{
     NSSet *touches = [event allTouches];
     
     UITouch *touch = [touches anyObject];
@@ -128,22 +131,13 @@
     NSString *uid = user.uid;
 
     if (user) {
-    [[[[self.db collectionWithPath:@"users"]
+    [[[[[self.db collectionWithPath:@"users"]
       documentWithPath: uid] collectionWithPath:@"mycart"]
-      addDocumentWithData:@{
-        @"pname":gg.title,
-        @"price":gg.price,
-        @"image":gg.imageUrl,
-        @"storename":gg.storename,
-        @"storeloc":gg.storeLoc,
-        @"latitude":gg.latitude,
-        @"logitude":gg.longitude,
-
-      } completion:^(NSError *  _Nullable error){
-        if(error != nil){
-            NSLog(@"Error adding document: %@", [error localizedDescription]);
-        } else{
-            NSLog(@"Added product to your cart list: %@", uid);
+      documentWithPath:gg.storeid] deleteDocumentWithCompletion:^(NSError * _Nullable error) {
+        if (error !=nil) {
+            NSLog(@"item was not removed successfuly");
+        }else{
+            NSLog(@"Item has been removed");
         }
     }];
         

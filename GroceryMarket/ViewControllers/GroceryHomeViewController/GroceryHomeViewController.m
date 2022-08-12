@@ -147,9 +147,9 @@
     NSString *uid = user.uid;
 
     if (user) {
-    [[[[self.db collectionWithPath:@"users"]
-      documentWithPath: uid] collectionWithPath:@"mycart"]
-      addDocumentWithData:@{
+    [[[[[self.db collectionWithPath:@"users"]
+      documentWithPath: uid] collectionWithPath:@"mycart"] documentWithPath:gg.storeid]
+     setData:@{
         @"pname":gg.title,
         @"price":gg.price,
         @"image":gg.imageUrl,
