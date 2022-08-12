@@ -57,13 +57,13 @@
             UIProgressView *progress;
             progress = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
             progress.progressTintColor = [UIColor colorWithRed:187.0/255 green:160.0/255 blue:209.0/255 alpha:1.0];
-            [[progress layer] setFrame:CGRectMake(20, 50, 200, 200)];
+            [[progress layer] setFrame:CGRectMake(50, 50, 50, 50)];
             [[progress layer]setBorderColor:[UIColor redColor].CGColor];
             progress.trackTintColor = [UIColor clearColor];
             [progress setProgress:(float)(50/100) animated:YES];
             
             [[progress layer] setCornerRadius:progress.frame.size.width / 2];
-            [[progress layer]setBorderWidth:3];
+            [[progress layer]setBorderWidth:10];
             [[progress layer]setMasksToBounds:TRUE];
             progress.clipsToBounds = YES;
             
