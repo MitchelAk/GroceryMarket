@@ -14,6 +14,8 @@
 @interface RegisterViewController ()
 
 @property (readwrite, nonatomic) FIRFirestore *db;
+@property (weak, nonatomic) NSURL *url;
+
 
 @end
 
@@ -72,7 +74,8 @@
                 @"email":email,
                 @"phone":phone,
                 @"username":username,
-                @"address":address
+                @"address":address,
+                @"profilepic":@""
               } completion:^(NSError *  _Nullable error){
                 if(error != nil){
                     NSLog(@"Error adding document: %@", [error localizedDescription]);
@@ -93,7 +96,7 @@
 
 // MARK: Actions
 - (IBAction)registerBtn:(id)sender {
-    if ([_usernameField.text isEqualToString:@""] || [_emailField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_phoneField.text isEqualToString:@""] || [_addressField.text isEqualToString:@""]) {
+    if ([_usernameField.text isEqualToString:@""] || [_profileImage.image isEqual:nil] || [_emailField.text isEqualToString:@""] || [_passwordField.text isEqualToString:@""] || [_phoneField.text isEqualToString:@""] || [_addressField.text isEqualToString:@""]) {
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Oooops"
                                                                        message:@"Please fill out all required fields"
@@ -142,12 +145,14 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:( UIImage *)image editingInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)editingInfo {
     UIImage *selectedimg = image;
+    _url = [editingInfo valueForKey:UIImagePickerControllerImageURL];
 
     self.profileImage.image = selectedimg;
      
     [self.view setNeedsDisplay];
     [picker dismissViewControllerAnimated:YES completion:nil];
     NSLog(@"You selected an image");
+    NSLog(@"%@", _url);
 
 }
 
