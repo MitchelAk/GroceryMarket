@@ -19,12 +19,6 @@
 
 @implementation ItemContentViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    [self.cartButton setTitle:@"" forState: UIControlStateNormal];
-    [self.mapButton setTitle:@"" forState: UIControlStateNormal];
-    
-}
 
 
 - (void)viewDidLoad {
@@ -43,6 +37,10 @@
     self.productName.text = self.productname;
     self.productPrice.text = combPrice;
     self.storeName.text = self.storename;
+    
+    [self.cartButton setTitle:@"" forState: UIControlStateNormal];
+    [self.mapButton setTitle:@"" forState: UIControlStateNormal];
+    
     
 }
 
