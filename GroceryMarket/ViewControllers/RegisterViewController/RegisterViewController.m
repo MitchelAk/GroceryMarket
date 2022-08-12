@@ -144,7 +144,7 @@
     
 }
 
--(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(nonnull NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:( NSDictionary *)info {
     UIImage *selectedimg = [info valueForKey:UIImagePickerControllerOriginalImage];
     NSURL *url = [info valueForKey:UIImagePickerControllerImageURL];
 
