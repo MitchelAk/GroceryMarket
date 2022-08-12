@@ -146,7 +146,7 @@
 
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:( NSDictionary *)info {
     UIImage *selectedimg = [info valueForKey:UIImagePickerControllerOriginalImage];
-    NSURL *url = [info valueForKey:UIImagePickerControllerPHAsset];
+    NSURL *url = [info valueForKey:UIImagePickerControllerImageURL];
 
     self.profileImage.image = selectedimg;
      
@@ -163,7 +163,7 @@
     FIRStorage *storage = [FIRStorage storage];
 
     FIRStorageReference *storageRef = [storage reference];
-    FIRStorageReference *profileRef = [storageRef child:@"images/dp.jpg"];
+    FIRStorageReference *profileRef = [storageRef child:@"images/"];
 
 
     FIRStorageUploadTask *uploadTask = [profileRef putFile:localFile metadata:nil completion:^(FIRStorageMetadata * metadata, NSError * error) {
